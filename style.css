@@ -1,1 +1,19 @@
+<<<<<<< Updated upstream
 /*Página: Sobre nosotras*/
+=======
+/*Página: Sobre nosotras*/
+html {
+    height: 100%;
+    width: 100%;
+  }
+
+#titulosobrenosotros {
+  text-align: center;
+}
+
+#textosobrenosotros {
+  text-align: center;
+  text-align: justify;
+  padding: 0 80px; /* Agrega 20px de espacio a los lados */
+}
+>>>>>>> Stashed changes
