@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); 
 #encabezado {
     background: url('/Fotos/flores.jpg') no-repeat center center/cover;
@@ -53,5 +54,60 @@
     .navbar {
         background: rgba(255, 255, 255, 0.9);
     }
+}
+
+
+/*Página: Sobre nosotras*/
+html {
+    height: 100%;
+    width: 100%;
+  }
+
+
+#titulosobrenosotros {
+  text-align: center;
+}
+
+#textosobrenosotros {
+  text-align: center;
+  text-align: justify;
+  padding: 0 80px; /* Agrega 20px de espacio a los lados */
+
+
+
+
+.footer {
+    background-color: #EAEBC8;
+    padding: 40px 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer h6 {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer .logo {
+    width: 120px;
+}
+
+.footer i {
+    font-size: 20px;
+    color: #333;
+
 }
 
