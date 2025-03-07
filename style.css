@@ -1,5 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); 
+#encabezado {
+    background: url('/Fotos/flores.jpg') no-repeat center center/cover;
+    height: 12vh; /* Ajusta la altura según lo necesites */
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Estilos del Navbar */
+.navbar {
+    width: 100%;
+    background: transparent !important;
+    padding: 15px 0;
+}
+
+/* Logo */
+.logo {
+    height: 60px; /* Ajusta el tamaño según tu logo */
+}
+
+/* Enlaces del navbar */
+.navbar-nav .nav-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 20 px;
+    color: white !important;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+#login {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+/* Efecto hover para el botón Login */
+#login:hover {
+    border-color: #42cf2f; /* Cambiar borde a rojo */
+    background-color: rgba(160, 44, 44, 0.1); /* Fondo ligeramente rojo */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #a02c2c; /* Cambia a un tono acorde a la marca */
+}
+
+/* Para hacerlo responsivo */
+@media (max-width: 768px) {
+    #encabezado {
+        height: 200px;
+    }
+    .navbar {
+        background: rgba(255, 255, 255, 0.9);
+    }
+}
+
+
 /*Página: Sobre nosotras*/
 html {
     height: 100%;
     width: 100%;
   }
+
+
+#titulosobrenosotros {
+  text-align: center;
+}
+
+#textosobrenosotros {
+  text-align: center;
+  text-align: justify;
+  padding: 0 80px; /* Agrega 20px de espacio a los lados */
+
+
+
+
+.footer {
+    background-color: #EAEBC8;
+    padding: 40px 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer h6 {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer .logo {
+    width: 120px;
+}
+
+.footer i {
+    font-size: 20px;
+    color: #333;
+
+}
+
