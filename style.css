@@ -5,6 +5,16 @@ html {
   }
 
 
+#titulosobrenosotros {
+  text-align: center;
+}
+
+#textosobrenosotros {
+  text-align: center;
+  text-align: justify;
+  padding: 0 80px; /* Agrega 20px de espacio a los lados */
+
+
 
 
 .footer {
@@ -39,4 +49,5 @@ html {
 .footer i {
     font-size: 20px;
     color: #333;
+
 }
