@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); 
 #encabezado {
-    background: url('/Fotos/flores.jpg') no-repeat center center/cover;
+    background: url('./Fotos/flores.jpg') no-repeat center center/cover;
     height: 12vh; /* Ajusta la altura según lo necesites */
     position: relative;
     flex-direction: column;
