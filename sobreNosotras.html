@@ -12,9 +12,36 @@
 
 <body>
 
-    <header id="encabezado"></header>
+    <header id="encabezado">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">Personaliza tu ramo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Carrito de compra</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        <li id="login" class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+ 
     <main id="cuerpo" class="container-fluid">
+        <div>
+             <h1 id="titulosobrenosotros">Sobre Nosotras</h1>
+
+             <h4 id="textosobrenosotros">En nuestro e-commerce, transformamos la manera en que las personas compran arreglos florales. A diferencia de las floristerías tradicionales con catálogos rígidos, ofrecemos una plataforma innovadora que permite diseñar arreglos únicos en tiempo real, eligiendo flores, colores y estilos según las preferencias del cliente.
+            Dirigido a quienes buscan regalos personalizados, decoradores, organizadores de eventos y empresas, nuestro servicio combina creatividad, tecnología y sostenibilidad para brindar una experiencia intuitiva y de alta calidad.
+            Nuestra misión es ofrecer libertad y flexibilidad en el diseño floral, garantizando frescura, excelencia y un proceso fácil. Aspiramos a ser la plataforma líder en personalización de arreglos florales, revolucionando la industria con innovación y compromiso con el cliente.</h4>
+
+        </div>
         <section id="team-card-description" class="container-fluid">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -122,6 +149,8 @@
                     </div>
                 </div>
 
+
+
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Anterior</span>
@@ -134,7 +163,46 @@
         </section>
     </main>
 
-    <footer id="footer"></footer>
+
+
+
+    <footer id="footer" class="footer mt-5">
+            <div class="container">
+                <div class="row">
+                   
+                    <div class="col-md-4 text-center text-md-start">
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <img src="wL.png" alt="White Lotus Logo" class="logo mt-3">
+                    </div>
+    
+                   
+                    <div class="col-md-4 text-center">
+                        <h6>Explore</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#">Sobre nosotros</a></li>
+                        </ul>
+                        <h6>Resources</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Formulario de productos</a></li>
+                            <li><a href="#">Trabaja con Nosotrxs</a></li>
+                        </ul>
+                    </div>
+    
+                    
+                    <div class="col-md-4 text-center text-md-end">
+                        <h6>Por el equipo Dreamcode:</h6>
+                        <p>Ana Paola, Dani, Ana Karen, Estefanía, Tamara y Montse</p>
+                        <p>contacto@whitelotus.com</p>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    
 
     <!--script de bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
