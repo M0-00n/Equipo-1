@@ -1,6 +1,115 @@
+/* Esto es para que el contenido se adapate a las pantallas, todas las etiquetas que tengan la clase container podran adaptarse*/
+.container {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+    .container {
+    max-width: 1280px;
+    }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+    .container {
+    max-width: 1024px;
+    }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+    .container {
+    max-width: 768px;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .container {
+    max-width: 640px;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .container {
+    max-width: 475px;
+    }
+}
+
+/* xs */
+@media (max-width: 475px) {
+    .container {
+    width: 100%;
+    }
+}
+/*Hasata aquí lo de apatar a las pantallas*/
+
+/*Letra inter que elegimos */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/*Formatos de los tipos de letra que establecimos en el Diseño*/
+/*Haré clase para que se pueda referenciar como el container*/
+.pTipoLetra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #828282; 
+}
+
+.h1TipoLetra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bolder;
+    color: #adc869;
+}
+
+.h2TipoLetra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+    color: #83AF9B
+    ;
+}
+.h3TipoLetra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #FC9D9A;
+}
+
+.h5TipoLetra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bolder;
+}
+.h6TipoLetra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bolder;
+    color:#333;
+}
+/* Aplica pTipoLetra automáticamente a todos los <a> dentro de <li> */
+.col-md-4 ul li a {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #828282;
+}
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); 
 #encabezado {
-    background: url('/Fotos/flores.jpg') no-repeat center center/cover;
+    background: url('./fotosPaginas/fotosPagNosotras/flores.jpg') no-repeat center center/cover;
     height: 12vh; /* Ajusta la altura según lo necesites */
     position: relative;
     flex-direction: column;
@@ -55,3 +164,123 @@
     }
 }
 
+
+/*Página: Sobre nosotras*/
+html {
+    height: 100%;
+    width: 100%;
+}
+
+
+#titulosobrenosotros {
+    padding: 1rem;
+    text-align: center;
+}
+#textosobrenosotros {
+    text-align: center;
+    text-align: justify;
+    padding: 1rem;  
+}
+
+/* Ajustar el ancho de la card para que no sea fijo */
+@media (max-width: 768px) {
+    .card {
+        width: 100% !important; /* Ocupar todo el ancho disponible */
+        padding: 2rem;
+    }
+
+    /* Hacer que las columnas se apilen en lugar de estar en una fila */
+    .card .row {
+        flex-direction: column; /* Apila los elementos */
+        text-align: center; /* Centra el texto */
+    }
+
+    /* Ajustar la imagen para que no se reduzca demasiado */
+    .card .col-md-4 img {
+        max-width: 150px; /* Evita que la imagen se haga demasiado grande */
+        margin: 0 auto; /* Centrar la imagen */
+        display: block;
+        width: 150px;  /* Ancho fijo */
+        height: 150px; /* Alto fijo */
+        object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
+        display: block; /* Asegura que la imagen no tenga espacios extra */
+        margin: 0 auto; /* Centra la imagen */
+    }
+
+    /* Ajustar el texto para que no se corte */
+    .card .card-body {
+        padding: 1rem;
+    }
+
+    /* Evitar que el texto se corte */
+    .card-text {
+        white-space: normal; /* Permite saltos de línea */
+        overflow: visible; /* Asegura que el texto se muestre correctamente */
+    }
+}
+
+
+.footer {
+    background-color: #EAEBC8;
+    padding: 40px 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.footer img {
+
+
+}
+.footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer h6 {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer .logo {
+    width: 120px;
+}
+
+.footer i {
+    font-size: 20px;
+    color: #333;
+
+}
+
+/*puntero circulos*/
+.click-circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(176, 241, 166, 0.7); /* Morado sin relleno */
+    border-radius: 50%;
+    pointer-events: none; /* Evita que interfiera con más clics */
+    animation: expand 3s infinite ease-out;
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(4);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(8);
+        opacity: 0;
+    }
+}
