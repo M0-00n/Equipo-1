@@ -183,6 +183,7 @@ html {
 }
 
 
+<<<<<<< Updated upstream
 /* Ajustar el ancho de la card para que no sea fijo */
 @media (max-width: 768px) {
     .card {
@@ -220,6 +221,9 @@ html {
     }
 }
 
+=======
+}
+>>>>>>> Stashed changes
 
 
 .footer {
