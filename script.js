@@ -2,6 +2,8 @@
 //Puntero de circulos
 document.addEventListener("DOMContentLoaded", function () {
     const cuerpo = document.getElementById("cuerpo"); 
+    console.log("Cuerpo encontrado:", cuerpo);
+
 
     if (!cuerpo) {
         console.error("El elemento con ID 'cuerpo' no existe.");
@@ -27,4 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
             circle.remove();
         }, 3000); 
     });
+    console.log("si funciona")
 });
+
