@@ -182,7 +182,6 @@ html {
     padding: 1rem;  
 }
 
-
 /* Ajustar el ancho de la card para que no sea fijo */
 @media (max-width: 768px) {
     .card {
@@ -219,7 +218,6 @@ html {
         overflow: visible; /* Asegura que el texto se muestre correctamente */
     }
 }
-
 
 
 .footer {
