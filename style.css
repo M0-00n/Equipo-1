@@ -169,6 +169,7 @@
 html {
     height: 100%;
     width: 100%;
+
 }
 
 
@@ -283,10 +284,24 @@ html {
         transform: scale(8);
         opacity: 0;
     }
+
+  }
+
+#titulosobrenosotros {
+  text-align: center;
+}
+
+#textosobrenosotros {
+  text-align: center;
+  text-align: justify;
+  padding: 0 80px; /* Agrega 20px de espacio a los lados */
+
+
 }
 
 /*PAGINA DE CONTÁCTO*/
 .form-label{
     font-family: 'Inter', sans-serif;
     color: #FC9D9A;
+
 }
