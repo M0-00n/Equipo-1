@@ -109,7 +109,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); 
 #encabezado {
-    background: url('./fotosPaginas/fotosPagNosotras/flores.jpg') no-repeat center center/cover;
+    background: url("fotosPaginas/fotosPagNosotras/lavanda.png") no-repeat center center/cover;
     height: 12vh; /* Ajusta la altura según lo necesites */
     position: relative;
     flex-direction: column;
@@ -182,7 +182,6 @@ html {
     padding: 1rem;  
 }
 
-
 /* Ajustar el ancho de la card para que no sea fijo */
 @media (max-width: 768px) {
     .card {
@@ -219,7 +218,6 @@ html {
         overflow: visible; /* Asegura que el texto se muestre correctamente */
     }
 }
-
 
 
 .footer {
@@ -285,4 +283,10 @@ html {
         transform: scale(8);
         opacity: 0;
     }
+}
+
+/*PAGINA DE CONTÁCTO*/
+.form-label{
+    font-family: 'Inter', sans-serif;
+    color: #FC9D9A;
 }
