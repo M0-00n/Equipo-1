@@ -164,7 +164,7 @@
 
 /* Para hacerlo responsivo */
 @media (max-width: 768px) {
-    #encabezado {
+    .encabezado {
         height: 200px;
     }
     .navbar {
