@@ -108,13 +108,21 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); 
-#encabezado {
-    background: url("fotosPaginas/fotosPagNosotras/lavanda.png") no-repeat center center/cover;
+.encabezado {
     height: 12vh; /* Ajusta la altura según lo necesites */
     position: relative;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+
+#encabezadoNos{
+    background: url("fotosPaginas/fotosPagNosotras/flores.jpg") no-repeat center center/cover;
+}
+
+#encabezadoCon{
+    background: url("fotosPaginas/fotosPagNosotras/lavanda.png") no-repeat center center/cover;
+
 }
 
 /* Estilos del Navbar */
