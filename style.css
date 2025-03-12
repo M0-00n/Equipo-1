@@ -108,8 +108,8 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); 
-#encabezado {
-    background: url('./fotosPaginas/fotosPagNosotras/flores.jpg') no-repeat center center/cover;
+
+.encabezado {
     height: 12vh; /* Ajusta la altura según lo necesites */
     position: relative;
     flex-direction: column;
@@ -117,58 +117,116 @@
     align-items: center;
 }
 
-/* Estilos del Navbar */
+#encabezadoNos{
+    background: url("fotosPaginas/fotosPagNosotras/flores.jpg") no-repeat center center/cover;
+}
+
+#encabezadoCon{
+    background: url("fotosPaginas/fotosPagNosotras/lavanda.png") no-repeat center center/cover;
+
+}
+
+/* Navbar */
 .navbar {
     width: 100%;
     background: transparent !important;
-    padding: 15px 0;
-}
-
-/* Logo */
-.logo {
-    height: 60px; /* Ajusta el tamaño según tu logo */
+    padding: 10px 0; /* Espaciado reducido */
 }
 
 /* Enlaces del navbar */
 .navbar-nav .nav-link {
     font-family: 'Inter', sans-serif;
-    font-size: 20 px;
+    font-size: 18px; /* Tamaño de fuente base */
     color: white !important;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 8px 15px; /* Espaciado reducido */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Ajustar la alineación del botón Login */
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
 }
 
 #login {
-    border: 2px solid transparent;
+    border: 2px solid white;
     border-radius: 10px;
-    border: 2px solid #ffffff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    margin-left: 10px; /* Espaciado a la izquierda para separarlo del último enlace */
 }
 
 /* Efecto hover para el botón Login */
 #login:hover {
-    border-color: #42cf2f; /* Cambiar borde a rojo */
-    background-color: rgba(160, 44, 44, 0.1); /* Fondo ligeramente rojo */
+    border-color: #42cf2f;
+    background-color: rgba(160, 44, 44, 0.1);
 }
 
+/* Efecto hover para los enlaces */
 .navbar-nav .nav-link:hover {
-    color: #a02c2c; /* Cambia a un tono acorde a la marca */
+    color: #8A4F7D !important;
 }
 
-/* Para hacerlo responsivo */
+/* Responsividad para pantallas pequeñas (menos de 768px) */
 @media (max-width: 768px) {
     #encabezado {
-        height: 200px;
+        min-height: 60px; /* Altura más pequeña para móviles */
+        padding: 5px 0; /* Espaciado reducido */
     }
-    .navbar {
-        background: rgba(255, 255, 255, 0.9);
+
+    .navbar-nav .nav-link {
+        font-size: 16px; /* Tamaño de fuente más pequeño para móviles */
+        padding: 6px 10px; /* Espaciado reducido */
+    }
+
+    #login {
+        margin-top: 8px; /* Espaciado adicional reducido */
+    }
+
+    .navbar-collapse {
+        text-align: center; /* Centrar los elementos del menú */
     }
 }
 
+/* Responsividad para pantallas medianas (entre 769px y 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    #encabezado {
+        min-height: 70px; /* Altura intermedia para pantallas medianas */
+        padding: 8px 0; /* Espaciado reducido */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 17px; /* Tamaño de fuente intermedio */
+        padding: 8px 12px; /* Espaciado reducido */
+    }
+
+    #login {
+        margin-top: 6px; /* Espaciado adicional reducido */
+    }
+}
+
+/* Responsividad para pantallas grandes (más de 992px) */
+@media (min-width: 993px) {
+    #encabezado {
+        min-height: 80px; /* Altura para pantallas grandes */
+        padding: 10px 0; /* Espaciado normal */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 18px; /* Tamaño de fuente para pantallas grandes */
+        padding: 10px 20px; /* Espaciado normal */
+    }
+
+    #login {
+        margin-top: 10px; /* Espaciado adicional normal */
+    }
+}
 
 /*Página: Sobre nosotras*/
 html {
     height: 100%;
     width: 100%;
+
 }
 
 
@@ -283,4 +341,48 @@ html {
         transform: scale(8);
         opacity: 0;
     }
+
+  }
+
+#titulosobrenosotros {
+  text-align: center;
 }
+
+#textosobrenosotros {
+  text-align: center;
+  text-align: justify;
+  padding: 0 80px; /* Agrega 20px de espacio a los lados */
+
+
+}
+
+/*PAGINA DE CONTÁCTO*/
+
+.form-label{
+    font-family: 'Inter', sans-serif;
+    color: #FC9D9A;
+}
+
+
+.contenedor {
+    display: flex;               /* Utiliza Flexbox */
+    justify-content: center;     /* Centra el contenido horizontalmente */
+    align-items: center;         /* Centra el contenido verticalmente */
+    height: 100px;               /* Altura del contenedor (ajústalo según sea necesario) */
+  }
+  
+#botoncontacto {
+    background-color: #83AF9B; /* Color verde agua */
+    color: white; /* Letras blancas */
+    padding: 10px 20px; /* Espacio interno */
+    border: none; /* Elimina el borde */
+    max-width: 300px; /* Tamaño máximo */
+    text-align: center; /* Centra el texto */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+    width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
+    margin: 10px auto; /* Ajusta el margen según sea necesario */
+
+  }
+
+}
+
