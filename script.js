@@ -32,3 +32,5 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("si funciona")
 });
 
+/* Página de contacto */
+
