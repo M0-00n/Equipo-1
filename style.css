@@ -108,19 +108,22 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); 
-/* Estilos base del header */
-/* Estilos base del header */
-/* Estilos base del header */
-/* Estilos base del header */
-/* Estilos base del header */
-/* Estilos base del header */
-#encabezado {
-    background: url("fotosPaginas/fotosPagNosotras/lavanda.png") no-repeat center center/cover;
-    min-height: 80px; /* Altura mínima para asegurar que siempre se vea bien */
+
+.encabezado {
+    height: 12vh; /* Ajusta la altura según lo necesites */
     position: relative;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+}
+
+#encabezadoNos{
+    background: url("fotosPaginas/fotosPagNosotras/flores.jpg") no-repeat center center/cover;
+}
+
+#encabezadoCon{
+    background: url("fotosPaginas/fotosPagNosotras/lavanda.png") no-repeat center center/cover;
+
 }
 
 /* Navbar */
