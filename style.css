@@ -169,7 +169,7 @@
 
 /* Responsividad para pantallas pequeñas (menos de 768px) */
 @media (max-width: 768px) {
-    #encabezado {
+    .encabezado {
         min-height: 60px; /* Altura más pequeña para móviles */
         padding: 5px 0; /* Espaciado reducido */
     }
