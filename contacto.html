@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header id="encabezado">
+    <header id="encabezadoCon" class="encabezado">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -36,38 +36,49 @@
         <div>
             <h1 class="h1TipoLetra" id="titulosobrenosotros">Contáctanos</h1>
         </div>
-        <div class="row">
+        <div class="container text-center">
+            <div class="row">
             <div class="col">
-                <label for="formGroupExampleInput" class="form-label">NOMBRE</label>
-                <input type="text" class="form-control" placeholder="Nombre" aria-label="NOMBRE">
+                
             </div>
             <div class="col">
-                <label for="formGroupExampleInput" class="form-label">APELLIDOS</label>
-                <input type="text" class="form-control" placeholder="Apellidos" aria-label="APELLIDOS">
-            </div>
-            <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">TELÉFONO</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Teléfono">
+                <div class="row">
+                    <div class="col">
+                        <label for="formGroupExampleInput" class="form-label">NOMBRE</label>
+                        <input type="text" class="form-control" placeholder="Nombre" aria-label="NOMBRE">
+                    </div>
+                    <div class="col">
+                        <label for="formGroupExampleInput" class="form-label">APELLIDOS</label>
+                        <input type="text" class="form-control" placeholder="Apellidos" aria-label="APELLIDOS">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">TELÉFONO</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Teléfono">
+                        </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">CORREO ELECTRÓNICO</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Correo electrónico">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">MENSAJE</label>
+                        <textarea class="form-control" placeholder="Deja tu mensaje aquí" id="floatingTextarea2" style="height: 100px"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button id="botoncontacto" type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
                 </div>
-            <div class="mb-3">
-                <label for="formGroupExampleInput2" class="form-label">CORREO ELECTRÓNICO</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Correo electrónico">
             </div>
-            <div class="mb-3">
-                <label for="formGroupExampleInput2" class="form-label">MENSAJE</label>
-                <textarea class="form-control" placeholder="Deja tu mensaje aquí" id="floatingTextarea2" style="height: 100px"></textarea>
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Sign in</button>
-            </div>
+            <div class="col">
+
         </div>
+
 
     </main>
 
     <footer id="footer" class="footer mt-5 container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 text-center text-md-start">
+                <div class="col-md-3 text-center text-md-start">
                     <div class="d-flex align-items-center">
                         <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
@@ -75,22 +86,23 @@
                     <img src="./fotosPaginas/fotosPagNosotras/logo.png.png" alt="White Lotus Logo" class="logo mt-3 img-fluid ">
                 </div>
 
-                <div class="col-md-4 text-center">
-                    <h6 class="h6TipoLetra">Explore</h6>
+                <div class="col-md-3 text-center">
+                    <h6 class="h6TipoLetra">Explora</h6>
                     <ul class="list-unstyled">
                         <li><a class="pTipoLetra" href="#">Blog</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
                         <li><a href="#">Sobre nosotros</a></li>
                     </ul>
-                    <h6 class="h6TipoLetra">Resources</h6>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h6 class="h6TipoLetra">Recursos</h6>
                     <ul class="list-unstyled">
                         <li><a class="pTipoLetra" href="#">Formulario de productos</a></li>
                         <li><a class="pTipoLetra" href="#">Trabaja con Nosotrxs</a></li>
                     </ul>
                 </div>
-
                 
-                <div class="col-md-4 text-center text-md-end">
+                <div class="col-md-3 text-center text-md-end">
                     <h6 class="h6TipoLetra">Por el equipo Dreamcode:</h6>
                     <p class="pTipoLetra">Ana Paola, Dani, Ana Karen, Estefanía, Tamara y Montse</p>
                     <p class="pTipoLetra">contacto@whitelotus.com</p>
