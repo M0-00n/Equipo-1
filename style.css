@@ -126,7 +126,6 @@
 
 }
 
-/* Navbar */
 .navbar {
     width: 100%;
     background: transparent !important;
@@ -170,6 +169,8 @@
 /* Responsividad para pantallas pequeñas (menos de 768px) */
 @media (max-width: 768px) {
     .encabezado {
+
+        height: 200px;
         min-height: 60px; /* Altura más pequeña para móviles */
         padding: 5px 0; /* Espaciado reducido */
     }
@@ -190,7 +191,7 @@
 
 /* Responsividad para pantallas medianas (entre 769px y 992px) */
 @media (min-width: 769px) and (max-width: 992px) {
-    #encabezado {
+    .encabezado {
         min-height: 70px; /* Altura intermedia para pantallas medianas */
         padding: 8px 0; /* Espaciado reducido */
     }
@@ -207,7 +208,7 @@
 
 /* Responsividad para pantallas grandes (más de 992px) */
 @media (min-width: 993px) {
-    #encabezado {
+    .encabezado {
         min-height: 80px; /* Altura para pantallas grandes */
         padding: 10px 0; /* Espaciado normal */
     }
@@ -383,5 +384,4 @@ html {
     margin: 10px auto; /* Ajusta el margen según sea necesario */
 
   }
-
 
