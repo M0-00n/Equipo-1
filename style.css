@@ -1,4 +1,9 @@
-/* Esto es para que el contenido se adapate a las pantallas, todas las etiquetas que tengan la clase container podran adaptarse*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container {
     max-width: 1536px;
     margin-left: auto;
@@ -7,53 +12,44 @@
     padding-right: 0.4rem;
 }
 
-/* 2xl */
 @media (max-width: 1536px) {
     .container {
-    max-width: 1280px;
+        max-width: 1280px;
     }
 }
 
-/* xl */
 @media (max-width: 1280px) {
     .container {
-    max-width: 1024px;
+        max-width: 1024px;
     }
 }
 
-/* lg */
 @media (max-width: 1024px) {
     .container {
-    max-width: 768px;
+        max-width: 768px;
     }
 }
 
-/* md */
 @media (max-width: 768px) {
     .container {
-    max-width: 640px;
+        max-width: 640px;
     }
 }
 
-/* sm */
 @media (max-width: 640px) {
     .container {
-    max-width: 475px;
+        max-width: 475px;
     }
 }
 
-/* xs */
 @media (max-width: 475px) {
     .container {
-    width: 100%;
+        width: 100%;
     }
 }
-/*Hasata aquí lo de apatar a las pantallas*/
 
-/*Letra inter que elegimos */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-/*Formatos de los tipos de letra que establecimos en el Diseño*/
-/*Haré clase para que se pueda referenciar como el container*/
+
 .pTipoLetra {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -75,8 +71,8 @@
     font-style: normal;
     font-weight: bold;
     color: #83AF9B;
-    ;
 }
+
 .h3TipoLetra {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -90,6 +86,7 @@
     font-style: normal;
     font-weight: bolder;
 }
+
 .h6TipoLetra {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -97,7 +94,7 @@
     font-weight: bolder;
     color:#333;
 }
-/* Aplica pTipoLetra automáticamente a todos los <a> dentro de <li> */
+
 .col-md-4 ul li a {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -105,129 +102,138 @@
     color: #828282;
 }
 
-
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); 
 
 .encabezado {
-    height: 12vh; /* Ajusta la altura según lo necesites */
+    min-height: 80px;
     position: relative;
-    flex-direction: column;
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
     align-items: center;
-}
-
-#encabezadoNos{
     background: url("fotosPaginas/fotosPagNosotras/flores.jpg") no-repeat center center/cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
 }
 
-#encabezadoCon{
+#encabezadoCon {
     background: url("fotosPaginas/fotosPagNosotras/lavanda.png") no-repeat center center/cover;
+}
 
+#encabezadoformProducto{
+    background: url("fotosPaginas/fotosPagFormProductos/navbar_formularioProductos.jpg") no-repeat center center/cover;
 }
 
 .navbar {
     width: 100%;
     background: transparent !important;
-    padding: 10px 0; /* Espaciado reducido */
+    padding: 10px 0;
+    margin: 0;
 }
 
-/* Enlaces del navbar */
 .navbar-nav .nav-link {
     font-family: 'Inter', sans-serif;
-    font-size: 18px; /* Tamaño de fuente base */
+    font-size: 18px;
     color: white !important;
     font-weight: bold;
-    padding: 8px 15px; /* Espaciado reducido */
+    padding: 8px 15px;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Ajustar la alineación del botón Login */
 .navbar-nav {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos */
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 #login {
     border: 2px solid white;
     border-radius: 10px;
     transition: border-color 0.3s ease, background-color 0.3s ease;
-    margin-left: 10px; /* Espaciado a la izquierda para separarlo del último enlace */
+    margin-left: 10px;
 }
 
-/* Efecto hover para el botón Login */
 #login:hover {
     border-color: #42cf2f;
     background-color: rgba(160, 44, 44, 0.1);
 }
 
-/* Efecto hover para los enlaces */
 .navbar-nav .nav-link:hover {
     color: #8A4F7D !important;
 }
 
-/* Responsividad para pantallas pequeñas (menos de 768px) */
+/* Ajustes específicos para el menú hamburguesa */
 @media (max-width: 768px) {
     .encabezado {
-
-        height: 200px;
-        min-height: 60px; /* Altura más pequeña para móviles */
-        padding: 5px 0; /* Espaciado reducido */
+        min-height: 80px;
+        padding: 10px 0;
     }
 
-    .navbar-nav .nav-link {
-        font-size: 16px; /* Tamaño de fuente más pequeño para móviles */
-        padding: 6px 10px; /* Espaciado reducido */
-    }
-
-    #login {
-        margin-top: 8px; /* Espaciado adicional reducido */
+    .navbar-toggler {
+        margin-right: 0; /* Elimina el margen derecho del botón hamburguesa */
     }
 
     .navbar-collapse {
-        text-align: center; /* Centrar los elementos del menú */
+        width: 100%; /* Ocupa el 100% del ancho */
+        padding: 0; /* Elimina el padding adicional */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Apila los elementos del menú verticalmente */
+        width: 100%; /* Ocupa el 100% del ancho */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 18px;
+        padding: 10px 20px;
+        width: 100%; /* Ocupa el 100% del ancho */
+        text-align: center; /* Centra el texto */
+    }
+
+    #login {
+        margin-top: 10px;
+        width: 100%; /* Ocupa el 100% del ancho */
+        text-align: center; /* Centra el texto */
     }
 }
 
-/* Responsividad para pantallas medianas (entre 769px y 992px) */
 @media (min-width: 769px) and (max-width: 992px) {
     .encabezado {
-        min-height: 70px; /* Altura intermedia para pantallas medianas */
-        padding: 8px 0; /* Espaciado reducido */
+        min-height: 80px;
+        padding: 10px 0;
     }
 
     .navbar-nav .nav-link {
-        font-size: 17px; /* Tamaño de fuente intermedio */
-        padding: 8px 12px; /* Espaciado reducido */
+        font-size: 18px;
+        padding: 10px 20px;
     }
 
     #login {
-        margin-top: 6px; /* Espaciado adicional reducido */
+        margin-top: 10px;
     }
 }
 
-/* Responsividad para pantallas grandes (más de 992px) */
 @media (min-width: 993px) {
     .encabezado {
-        min-height: 80px; /* Altura para pantallas grandes */
-        padding: 10px 0; /* Espaciado normal */
+        min-height: 80px;
+        padding: 10px 0;
     }
 
     .navbar-nav .nav-link {
-        font-size: 18px; /* Tamaño de fuente para pantallas grandes */
-        padding: 10px 20px; /* Espaciado normal */
+        font-size: 18px;
+        padding: 10px 20px;
     }
 
     #login {
-        margin-top: 10px; /* Espaciado adicional normal */
+        margin-top: 10px;
     }
 }
-
 /*Página: Sobre nosotras*/
 html {
     height: 100%;
     width: 100%;
-
 }
 
 
@@ -358,7 +364,6 @@ html {
 }
 
 /*PAGINA DE CONTÁCTO*/
-
 .form-label{
     font-family: 'Inter', sans-serif;
     color: #FC9D9A;
