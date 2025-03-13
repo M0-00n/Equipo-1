@@ -343,16 +343,16 @@ html {
         opacity: 0;
     }
 
-  }
+}
 
 #titulosobrenosotros {
-  text-align: center;
+    text-align: center;
 }
 
 #textosobrenosotros {
-  text-align: center;
-  text-align: justify;
-  padding: 0 80px; /* Agrega 20px de espacio a los lados */
+    text-align: center;
+    text-align: justify;
+    padding: 0 80px; /* Agrega 20px de espacio a los lados */
 
 
 }
@@ -370,8 +370,8 @@ html {
     justify-content: center;     /* Centra el contenido horizontalmente */
     align-items: center;         /* Centra el contenido verticalmente */
     height: 100px;               /* Altura del contenedor (ajústalo según sea necesario) */
-  }
-  
+}
+
 #botoncontacto {
     background-color: #83AF9B; /* Color verde agua */
     color: white; /* Letras blancas */
@@ -382,6 +382,5 @@ html {
     box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
     width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
     margin: 10px auto; /* Ajusta el margen según sea necesario */
-
-  }
+}
 
