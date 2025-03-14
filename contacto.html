@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    
     <header id="encabezadoCon" class="encabezado">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
@@ -20,18 +21,13 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
-<<<<<<< Updated upstream
-                        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Personaliza tu ramo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Carrito de compra</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                        <li id="login" class="nav-item"><a class="nav-link" href="#">Login</a></li>
-=======
+
+
                         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="listaProductos.html">Personaliza tu ramo</a></li>
                         <li class="nav-item"><a class="nav-link" href="carritoCompra.html">Carrito de compra</a></li>
                         <li id="login" class="nav-item"><a class="nav-link" href="Registrate.html">Login</a></li>
->>>>>>> Stashed changes
+
                     </ul>
                 </div>
             </div>
@@ -45,46 +41,46 @@
         </div>
         <div class="container text-center">
             <div class="row">
-            <div class="col">
-                
-            </div>
-            <div class="col">
-                <div class="row">
-                    <div class="col">
-                        <label for="formGroupExampleInput" class="form-label">NOMBRE</label>
-                        <input type="text" class="form-control" placeholder="Nombre" aria-label="NOMBRE">
-                    </div>
-                    <div class="col">
-                        <label for="formGroupExampleInput" class="form-label">APELLIDOS</label>
-                        <input type="text" class="form-control" placeholder="Apellidos" aria-label="APELLIDOS">
-                    </div>
-                    <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">TELÉFONO</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Teléfono">
+                <div class="col"></div>
+                <div class="col">
+                    <form action="https://formspree.io/f/mrbpgrzj" method="POST"> 
+                        <div class="row">
+                            <div class="col">
+                                <label for="nombre" class="form-label">NOMBRE</label>
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
+                            </div>
+                            <div class="col">
+                                <label for="apellidos" class="form-label">APELLIDOS</label>
+                                <input type="text" class="form-control" name="apellidos" placeholder="Apellidos" required>
+                            </div>
                         </div>
-                    <div class="mb-3">
-                        <label for="formGroupExampleInput2" class="form-label">CORREO ELECTRÓNICO</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Correo electrónico">
-                    </div>
-                    <div class="mb-3">
-                        <label for="formGroupExampleInput2" class="form-label">MENSAJE</label>
-                        <textarea class="form-control" placeholder="Deja tu mensaje aquí" id="floatingTextarea2" style="height: 100px"></textarea>
-                    </div>
-                    <div class="col-12">
-                        <button id="botoncontacto" type="submit" class="btn btn-primary">Enviar</button>
-                    </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">TELÉFONO</label>
+                            <input type="tel" class="form-control" name="telefono" placeholder="Teléfono" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">CORREO ELECTRÓNICO</label>
+                            <input type="email" class="form-control" name="correo" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">MENSAJE</label>
+                            <textarea class="form-control" name="mensaje" placeholder="Deja tu mensaje aquí" style="height: 100px" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button id="botoncontacto" type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </form>
                 </div>
+                <div class="col"></div>
             </div>
+
             <div class="col">
-<<<<<<< Updated upstream
 
-=======
-            
->>>>>>> Stashed changes
+
+
         </div>
-
-
     </main>
+    
 
     <footer id="footer" class="footer mt-5 container-fluid">
         <div class="container">
@@ -102,14 +98,14 @@
                     <ul class="list-unstyled">
                         <li><a class="pTipoLetra" href="#">Blog</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="sobreNosotras.html">Sobre nosotras</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 text-center">
                     <h6 class="h6TipoLetra">Recursos</h6>
                     <ul class="list-unstyled">
-                        <li><a class="pTipoLetra" href="#">Formulario de productos</a></li>
-                        <li><a class="pTipoLetra" href="#">Trabaja con Nosotrxs</a></li>
+                        <li><a class="pTipoLetra" href="formProducto.html">Formulario de productos</a></li>
+                        <li><a class="pTipoLetra" href="contacto.html">Trabaja con Nosotrxs</a></li>
                     </ul>
                 </div>
                 
