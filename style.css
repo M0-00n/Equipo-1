@@ -121,6 +121,10 @@
     background: url("fotosPaginas/fotosPagNosotras/lavanda.png") no-repeat center center/cover;
 }
 
+#encabezadoListaProd{
+    background: url("fotosPaginas/fotosPagListaProductos/headerListaProductos.jpg") no-repeat center center/cover;
+}
+
 .navbar {
     width: 100%;
     background: transparent !important;
