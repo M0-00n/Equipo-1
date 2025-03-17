@@ -122,7 +122,10 @@
 }
 
 #encabezadoListaProd{
-    background: url("fotosPaginas/fotosPagListaProductos/headerListaProductos.jpg") no-repeat center center/cover;
+    background: url("fotosPaginas/fotosPagListaProductos/imagenBase.webp") no-repeat center center/cover;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .navbar {
