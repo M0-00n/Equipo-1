@@ -122,6 +122,21 @@ html {
     overflow: hidden;
 }
 
+#encabezadoReg{
+    background: url("fotosPaginas/fotosPagNosotras/Registrate.jpg") no-repeat center center/cover;
+}   
+
+#encabezadois{
+    background: url("fotosPaginas/fotosPagNosotras/Isesion.jpg") no-repeat center center/cover;
+}  
+
+#encabezadoListaProd{
+    background: url("fotosPaginas/fotosPagListaProductos/imagenBase.webp") no-repeat center center/cover;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 
 .navbar {
     width: 100%;
