@@ -434,5 +434,35 @@ html {
     background: url("fotosPaginas/fotosCarritoCompra/bouque.jpg") no-repeat center center/cover;
 }
 
+/*PAGINA DE INICIAR SESIÓN*/
+.containeriniciasesion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Hace que el contenedor ocupe toda la pantalla */
+}
+
+#forminiciasesion {
+    
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: white;
+    border-radius: 10px;
+    width: 500px; /* Ajusta el ancho según necesites */
+    margin: 30 auto; /* Centra horizontalmente */
+}
 
 
+#botoniniciarsesion {
+    background-color: #83AF9B; /* Color verde agua */
+    color: white; /* Letras blancas */
+    padding: 10px 20px; /* Espacio interno */
+    border: none; /* Elimina el borde */
+    max-width: 200px; /* Tamaño máximo */
+    text-align: center; /* Centra el texto */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+    width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
+    margin: 6px auto; /* Ajusta el margen según sea necesario */
+
+}
