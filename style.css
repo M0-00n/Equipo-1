@@ -1,3 +1,9 @@
+/*TODAS LAS PÁGINAS*/
+html {
+    height: 100%;
+    width: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -117,9 +123,13 @@
     overflow: hidden;
 }
 
-#encabezadoCon {
-    background: url("fotosPaginas/fotosPagNosotras/lavanda.png") no-repeat center center/cover;
-}
+#encabezadoReg{
+    background: url("fotosPaginas/fotosPagNosotras/Registrate.jpg") no-repeat center center/cover;
+}   
+
+#encabezadois{
+    background: url("fotosPaginas/fotosPagNosotras/Isesion.jpg") no-repeat center center/cover;
+}  
 
 #encabezadoListaProd{
     background: url("fotosPaginas/fotosPagListaProductos/imagenBase.webp") no-repeat center center/cover;
@@ -233,59 +243,6 @@
         margin-top: 10px;
     }
 }
-/*Página: Sobre nosotras*/
-html {
-    height: 100%;
-    width: 100%;
-}
-
-
-#titulosobrenosotros {
-    padding: 1rem;
-    text-align: center;
-}
-#textosobrenosotros {
-    text-align: center;
-    text-align: justify;
-    padding: 1rem;  
-}
-
-/* Ajustar el ancho de la card para que no sea fijo */
-@media (max-width: 768px) {
-    .card {
-        width: 100% !important; /* Ocupar todo el ancho disponible */
-        padding: 2rem;
-    }
-
-    /* Hacer que las columnas se apilen en lugar de estar en una fila */
-    .card .row {
-        flex-direction: column; /* Apila los elementos */
-        text-align: center; /* Centra el texto */
-    }
-
-    /* Ajustar la imagen para que no se reduzca demasiado */
-    .card .col-md-4 img {
-        max-width: 150px; /* Evita que la imagen se haga demasiado grande */
-        margin: 0 auto; /* Centrar la imagen */
-        display: block;
-        width: 150px;  /* Ancho fijo */
-        height: 150px; /* Alto fijo */
-        object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
-        display: block; /* Asegura que la imagen no tenga espacios extra */
-        margin: 0 auto; /* Centra la imagen */
-    }
-
-    /* Ajustar el texto para que no se corte */
-    .card .card-body {
-        padding: 1rem;
-    }
-
-    /* Evitar que el texto se corte */
-    .card-text {
-        white-space: normal; /* Permite saltos de línea */
-        overflow: visible; /* Asegura que el texto se muestre correctamente */
-    }
-}
 
 
 .footer {
@@ -295,10 +252,7 @@ html {
     font-family: Arial, sans-serif;
 }
 
-.footer img {
 
-
-}
 .footer a {
     color: #333;
     text-decoration: none;
@@ -351,10 +305,104 @@ html {
         transform: scale(8);
         opacity: 0;
     }
+
+}
+
+
+/*PÁGINA DE NOSOTROS*/
+
+#titulosobrenosotros {
+    padding: 1rem;
+    text-align: center;
+}
+#textosobrenosotros {
+    text-align: center;
+    text-align: justify;
+    padding: 1rem;  
+}
+
+/* Ajustar el ancho de la card para que no sea fijo */
+@media (max-width: 768px) {
+    .card {
+        width: 100% !important; /* Ocupar todo el ancho disponible */
+        padding: 2rem;
+    }
+
+    /* Hacer que las columnas se apilen en lugar de estar en una fila */
+    .card .row {
+        flex-direction: column; /* Apila los elementos */
+        text-align: center; /* Centra el texto */
+    }
+
+    /* Ajustar la imagen para que no se reduzca demasiado */
+    .card .col-md-4 img {
+        max-width: 150px; /* Evita que la imagen se haga demasiado grande */
+        margin: 0 auto; /* Centrar la imagen */
+        display: block;
+        width: 150px;  /* Ancho fijo */
+        height: 150px; /* Alto fijo */
+        object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
+        display: block; /* Asegura que la imagen no tenga espacios extra */
+        margin: 0 auto; /* Centra la imagen */
+    }
+
+    /* Ajustar el texto para que no se corte */
+    .card .card-body {
+        padding: 1rem;
+    }
+
+    /* Evitar que el texto se corte */
+    .card-text {
+        white-space: normal; /* Permite saltos de línea */
+        overflow: visible; /* Asegura que el texto se muestre correctamente */
+    }
 }
 
 /*PAGINA DE CONTÁCTO*/
+#encabezadoCon {
+    background: url("fotosPaginas/fotosPagNosotras/lavanda.png") no-repeat center center/cover;
+}
+
 .form-label{
     font-family: 'Inter', sans-serif;
     color: #FC9D9A;
 }
+
+.contenedor {
+    display: flex;               /* Utiliza Flexbox */
+    justify-content: center;     /* Centra el contenido horizontalmente */
+    align-items: center;         /* Centra el contenido verticalmente */
+    height: 100px;               /* Altura del contenedor (ajústalo según sea necesario) */
+}
+
+#botoncontacto {
+    background-color: #83AF9B; /* Color verde agua */
+    color: white; /* Letras blancas */
+    padding: 10px 20px; /* Espacio interno */
+    border: none; /* Elimina el borde */
+    max-width: 300px; /* Tamaño máximo */
+    text-align: center; /* Centra el texto */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+    width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
+    margin: 10px auto; /* Ajusta el margen según sea necesario */
+}
+
+
+/*PÁGINA DE FORMULARIO DE PPRODUCTOS*/
+#encabezadoformProducto{
+    background: url("fotosPaginas/fotosPagFormProductos/navbar_formularioProductos.jpg") no-repeat center center/cover;
+}
+
+/*PAGINA DE CARRITO DE COMPRAS*/
+
+#encabezadoFormCompras {
+    background: url("fotosPaginas/fotosFormCompra/girasoles.jpg") no-repeat center center/cover;
+}
+
+/*PAGINA DE LISTA DE PRODUCTOS*/
+
+#encabezadoCarrito {
+    background: url("fotosPaginas/fotosCarritoCompra/bouque.jpg") no-repeat center center/cover;
+}
+
+
