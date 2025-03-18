@@ -116,7 +116,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("fotosPaginas/fotosPagNosotras/flores.jpg") no-repeat center center/cover;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -131,15 +130,15 @@ html {
     background: url("fotosPaginas/fotosPagNosotras/Isesion.jpg") no-repeat center center/cover;
 }  
 
-#encabezadoListaProd{
-    background: url("fotosPaginas/fotosPagListaProductos/headerListaProductos.jpg") no-repeat center center/cover;
-}
-
 .navbar {
     width: 100%;
     background: transparent !important;
     padding: 10px 0;
     margin: 0;
+    position: absolute; /* O usa 'fixed' si quieres que siempre esté visible */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Para que esté por encima de otros elementos */
 }
 
 .navbar-nav .nav-link {
@@ -206,6 +205,7 @@ html {
         margin-top: 10px;
         width: 100%; /* Ocupa el 100% del ancho */
         text-align: center; /* Centra el texto */
+        
     }
 }
 
@@ -305,8 +305,30 @@ html {
 
 }
 
+/*PÁGINA PRINCIPAL*/
+
+#h1Index {
+    font-family: "Inter", sans-serif;
+    font-size-adjust: initial;
+    font-size: 15vw; /* Usa viewport width para que el tamaño del texto sea proporcional al ancho de la ventana */
+    padding-top: 100px;
+    text-align: center;
+}
+
+#encabezadoIndex {
+    background: url("fotosPaginas/fotosPagPrincipal/Fondo_título.jpg") no-repeat center center/cover;
+    min-height: 800px; /* O la altura que necesites */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /*PÁGINA DE NOSOTROS*/
+#encabezadoNos {
+    background: url("fotosPaginas/fotosPagNosotras/flores.jpg") no-repeat center center/cover;
+}
 
 #titulosobrenosotros {
     padding: 1rem;
@@ -390,16 +412,69 @@ html {
     background: url("fotosPaginas/fotosPagFormProductos/navbar_formularioProductos.jpg") no-repeat center center/cover;
 }
 
-/*PAGINA DE CARRITO DE COMPRAS*/
+/*PAGINA DE FORMULARIO DE COMPRAS*/
 
 #encabezadoFormCompras {
     background: url("fotosPaginas/fotosFormCompra/girasoles.jpg") no-repeat center center/cover;
 }
 
 /*PAGINA DE LISTA DE PRODUCTOS*/
+#encabezadoListaProd{
+    background: url("fotosPaginas/fotosPagListaProductos/header.jpg") no-repeat center center/cover;
+    min-height: 800px; /* O la altura que necesites */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+
+/*INICIAR SESION*/
+#encabezadois{
+    background: url("fotosPaginas/fotosPagNosotras/Isesion.jpg") no-repeat center center/cover;
+}  
+
+
+/*REGISTRATE*/
+#encabezadoReg{
+    background: url("fotosPaginas/fotosPagNosotras/Registrate.jpg") no-repeat center center/cover;
+}   
+
+
+/*CARRITO DE COMPRAS*/
 #encabezadoCarrito {
     background: url("fotosPaginas/fotosCarritoCompra/bouque.jpg") no-repeat center center/cover;
 }
 
+/*PAGINA DE INICIAR SESIÓN*/
+.containeriniciasesion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Hace que el contenedor ocupe toda la pantalla */
+}
 
+#forminiciasesion {
+    
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: white;
+    border-radius: 10px;
+    width: 500px; /* Ajusta el ancho según necesites */
+    margin: 30 auto; /* Centra horizontalmente */
+}
+
+
+#botoniniciarsesion {
+    background-color: #83AF9B; /* Color verde agua */
+    color: white; /* Letras blancas */
+    padding: 10px 20px; /* Espacio interno */
+    border: none; /* Elimina el borde */
+    max-width: 200px; /* Tamaño máximo */
+    text-align: center; /* Centra el texto */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+    width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
+    margin: 6px auto; /* Ajusta el margen según sea necesario */
+
+}
