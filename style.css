@@ -474,5 +474,6 @@ html {
     box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
     width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
     margin: 6px auto; /* Ajusta el margen según sea necesario */
+    border-radius: 10px; /* Bordes redondeados */
 
 }
