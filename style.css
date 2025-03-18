@@ -427,6 +427,17 @@ html {
     background: url("fotosPaginas/fotosPagNosotras/Registrate.jpg") no-repeat center center/cover;
 }   
 
+#botonregistrate{
+    background-color: #83AF9B; /* Color verde agua */
+    color: white; /* Letras blancas */
+    padding: 10px 20px; /* Espacio interno */
+    border: none; /* Elimina el borde */
+    max-width: 200px; /* Tamaño máximo */
+    text-align: center; /* Centra el texto */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+    width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
+    margin: 6px auto; /* Ajusta el margen según sea necesario */
+} 
 
 /*CARRITO DE COMPRAS*/
 #encabezadoCarrito {
