@@ -122,6 +122,13 @@ html {
     overflow: hidden;
 }
 
+#encabezadoReg{
+    background: url("fotosPaginas/fotosPagNosotras/Registrate.jpg") no-repeat center center/cover;
+}   
+
+#encabezadois{
+    background: url("fotosPaginas/fotosPagNosotras/Isesion.jpg") no-repeat center center/cover;
+}  
 
 .navbar {
     width: 100%;
@@ -413,7 +420,12 @@ html {
 
 /*PAGINA DE LISTA DE PRODUCTOS*/
 #encabezadoListaProd{
-    background: url("fotosPaginas/fotosPagListaProductos/headerListaProductos.jpg") no-repeat center center/cover;
+    background: url("fotosPaginas/fotosPagListaProductos/header.jpg") no-repeat center center/cover;
+    min-height: 800px; /* O la altura que necesites */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
