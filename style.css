@@ -122,13 +122,6 @@ html {
     overflow: hidden;
 }
 
-#encabezadoReg{
-    background: url("fotosPaginas/fotosPagNosotras/Registrate.jpg") no-repeat center center/cover;
-}   
-
-#encabezadois{
-    background: url("fotosPaginas/fotosPagNosotras/Isesion.jpg") no-repeat center center/cover;
-}  
 
 .navbar {
     width: 100%;
@@ -172,6 +165,7 @@ html {
 .navbar-nav .nav-link:hover {
     color: #8A4F7D !important;
 }
+
 
 /* Ajustes específicos para el menú hamburguesa */
 @media (max-width: 768px) {
@@ -421,11 +415,6 @@ html {
 /*PAGINA DE LISTA DE PRODUCTOS*/
 #encabezadoListaProd{
     background: url("fotosPaginas/fotosPagListaProductos/header.jpg") no-repeat center center/cover;
-    min-height: 800px; /* O la altura que necesites */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -444,6 +433,26 @@ html {
 /*CARRITO DE COMPRAS*/
 #encabezadoCarrito {
     background: url("fotosPaginas/fotosCarritoCompra/bouque.jpg") no-repeat center center/cover;
+}
+
+#mainCarrito .col-md-4{
+    padding: 10px;
+}
+
+#mainCarrito .card-text {
+    font-family: "Inter", sans-serif;
+    font-size-adjust: initial;
+    font-size: 40px; /* Usa viewport width para que el tamaño del texto sea proporcional al ancho de la ventana */
+    text-align: center;
+    font-weight: 600;
+}
+
+#mainCarrito .precio {
+    font-family: "Inter", sans-serif;
+    font-size-adjust: initial;
+    font-size: 20px; /* Usa viewport width para que el tamaño del texto sea proporcional al ancho de la ventana */
+    text-align: left;
+    font-weight: 300;
 }
 
 /*PAGINA DE INICIAR SESIÓN*/
