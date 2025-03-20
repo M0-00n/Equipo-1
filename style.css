@@ -165,6 +165,7 @@ html {
     color: #8A4F7D !important;
 }
 
+
 /* Ajustes específicos para el menú hamburguesa */
 @media (max-width: 768px) {
     .encabezado {
@@ -442,6 +443,26 @@ html {
 /*CARRITO DE COMPRAS*/
 #encabezadoCarrito {
     background: url("fotosPaginas/fotosCarritoCompra/bouque.jpg") no-repeat center center/cover;
+}
+
+#mainCarrito .col-md-4{
+    padding: 10px;
+}
+
+#mainCarrito .card-text {
+    font-family: "Inter", sans-serif;
+    font-size-adjust: initial;
+    font-size: 40px; /* Usa viewport width para que el tamaño del texto sea proporcional al ancho de la ventana */
+    text-align: center;
+    font-weight: 600;
+}
+
+#mainCarrito .precio {
+    font-family: "Inter", sans-serif;
+    font-size-adjust: initial;
+    font-size: 20px; /* Usa viewport width para que el tamaño del texto sea proporcional al ancho de la ventana */
+    text-align: left;
+    font-weight: 300;
 }
 
 /*PAGINA DE INICIAR SESIÓN*/
