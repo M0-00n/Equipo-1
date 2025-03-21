@@ -1,30 +1,38 @@
-
 class ItemsController {
-    constructor (){
+    constructor (currentId = 0){
         this.items = [];
-        this.currentId = 1;
-
+        this.currentId = currentId;
     }
 
-    addItem(name, description){
+    addItem(name, img, description){
         const item = {
             id : this.currentId++,
             name : name,
+            img: img,
             description : description,
         }
 
         this.items.push(item);
     }
 
-    removeItems(currentId){
-        this.items.splice(currentId - 1, 1)
-    }
+    // removeItems(id){
+    //     this.items = this.items.filter(item => item.id !== id);
+    // }
+
+    // loadItemsFromLocalStorage() {
+    //     const storageItems = localStorage.getItem("items")
+    //     if (storageItems) {
+    //         const items = JSON.parse(storageItems)
+    //         for (var i = 0, size = items.length; i < size; i++) {
+    //             const item = items[i];
+    //             this.items.push(item);
+    //         }
+    //     }
+    // }
 
 }
 
-// const productos = new ItemsController()
-// productos.addItem("flores", "Flores/img", "Flores Rojas")
-// console.log(productos.items)
-
-// productos.removeItems(1)
-// console.log(productos.items)
+const product = new ItemsController()
+product.addItem("FloresR", "FloresRojasImg", "Flores Rojas");
+product.addItem("FloresA", "FloresAzulesImg", "Flores Azuless");
+console.log(product);
