@@ -438,7 +438,10 @@ html {
 
 /*REGISTRATE*/
 #encabezadoReg{
-    background: url("fotosPaginas/fotosPagNosotras/Registrate.jpg") no-repeat center center/cover;
+    background: url("fotosPaginas/fotosPagNosotras/Flor\ naranja.jpg") no-repeat center center/cover;
+    width: 100%;  /* Se ajusta al ancho del contenedor */
+    max-height: 300px; /* Limita la altura máxima */
+    object-fit: cover; /* Recorta la imagen para que encaje sin distorsionarse */
 }   
 
 #botonregistrate{
