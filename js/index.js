@@ -1,34 +1,24 @@
+import ItemsController from "./itemsController.js";
 
+document.addEventListener("DOMContentLoaded", function() {
+    const itemsController = new ItemsController();
+    const newItemForm = document.querySelector("#newItemForm");
 
-itemsController.addItem("floresA", "Flores/img", "Flores Azules");
-itemsController.addItem("floresB", "Flores/img", "Flores Rojas");
-console.log(itemsController.items);
-// Select the New Task Form
-const newItemForm = document.querySelector('#newItemForm');
+    if (!newItemForm) {
+        console.error("No se encontró el formulario con id 'newItemForm'. Verifica que el ID es correcto y que el script se carga en la página adecuada.");
+        return;
+    }
 
-// Add an 'onsubmit' event listener
-newItemForm.addEventListener('submit', (event) => {
-    // Prevent default action
-    event.preventDefault();
+    newItemForm.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-    // Select the inputs
-    
-    const newItemNameInput = document.querySelector('#newItemNameInput');
-    const newItemDescription = document.querySelector('#newItemDescription');
-    
-    /*
-        Validation code here
-    */
+        const name = document.getElementById("newItemNameInput").value;
+        const description = document.getElementById("newItemDescription").value;
+        const img = document.getElementById("newItemImage").value;
 
-    // Get the values of the inputs
-    const name = newItemNameInput.value;
-    const description = newItemDescription.value;
+        itemsController.addItem(name, img, description);
 
-    // Add the task to the task manager
-    itemsController.addItem(name, description);
-
-    // Clear the form
-    newItemNameInput.value = '';
-    newItemDescription.value = '';
+        alert("Producto añadido correctamente");
+        newItemForm.reset(); // Limpia el formulario después de añadir el producto
+    });
 });
-
