@@ -36,13 +36,13 @@
 
     <div class="container"> 
     <form class="row g-3">
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Nombre</label>
-            <input type="email" class="form-control" id="inputEmail4">
+          <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
           </div>
           <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Apellidos</label>
-            <input type="password" class="form-control" id="inputPassword4">
+            <label for="nombre" class="form-label">Apellido</label>
+            <input type="text" class="form-control" name="apellido" placeholder="Apellido" required>
           </div>
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Correo Electrónico</label>
@@ -52,37 +52,45 @@
           <label for="inputPassword4" class="form-label">Contraseña</label>
           <input type="password" class="form-control" id="inputPassword4">
         </div>
-        <div class="col-12">
+        
+          <div class="col-md-6">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <div class="input-group">
+              <span class="input-group-text">+52</span>
+              <input type="tel" class="form-control" name="telefono" placeholder="Número de 10 dígitos" 
+                     required maxlength="10" pattern="\d{10}" 
+                     title="Debe contener exactamente 10 dígitos">
+            </div>
+          </div>
+        
+          <div class="col-md-6">
+            <label for="inputState" class="form-label">Delegación</label>
+            <select id="inputState" class="form-select">
+              <option selected>Seleccione una opción...</option>
+              <option>Álvaro Obregón</option>
+              <option>Azcapotzalco</option>
+              <option>Benito Juárez</option>
+              <option>Coyoacán</option>
+              <option>Cuajimalpa de Morelos</option>
+              <option>Cuauhtémoc</option>
+              <option>Gustavo A. Madero</option>
+              <option>Iztacalco</option>
+              <option>Iztapalapa</option>
+              <option>La Magdalena Contreras</option>
+              <option>Miguel Hidalgo</option>
+              <option>Milpa Alta</option>
+              <option>Tláhuac</option>
+              <option>Tlalpan</option>
+              <option>Venustiano Carranza</option>
+              <option>Xochimilco</option>
+            </select>
+          </div>
+        
+        <div class="col-md-6">
           <label for="inputAddress" class="form-label">Dirección</label>
           <input type="text" class="form-control" id="inputAddress" placeholder="1234 Ciudad de México">
         </div>
         <div class="col-md-6">
-          <label for="inputCity" class="form-label">Ciudad</label>
-          <input type="text" class="form-control" id="inputCity">
-        </div>
-        <div class="col-md-4">
-          <label for="inputState" class="form-label">Estado</label>
-          <select id="inputState" class="form-select">
-            <option selected>Seleccione una opción...</option>
-            <option>Álvaro Obregón</option>
-            <option>Azcapotzalco</option>
-            <option>Benito Juárez</option>
-            <option>Coyoacán</option>
-            <option>Cuajimalpa de Morelos</option>
-            <option>Cuauhtémoc</option>
-            <option>Gustavo A. Madero</option>
-            <option>Iztacalco</option>
-            <option>Iztapalapa</option>
-            <option>La Magdalena Contreras</option>
-            <option>Miguel Hidalgo</option>
-            <option>Milpa Alta</option>
-            <option>Tláhuac</option>
-            <option>Tlalpan</option>
-            <option>Venustiano Carranza</option>
-            <option>Xochimilco</option>
-          </select>
-        </div>
-        <div class="col-md-2">
           <label for="inputZip" class="form-label">Código Postal</label>
           <input type="text" class="form-control" id="inputZip">
         </div>
