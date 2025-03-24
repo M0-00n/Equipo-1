@@ -122,14 +122,6 @@ html {
     overflow: hidden;
 }
 
-#encabezadoReg{
-    background: url("fotosPaginas/fotosPagNosotras/Registrate.jpg") no-repeat center center/cover;
-}   
-
-#encabezadois{
-    background: url("fotosPaginas/fotosPagNosotras/Isesion.jpg") no-repeat center center/cover;
-}  
-
 .navbar {
     width: 100%;
     background: transparent !important;
@@ -172,6 +164,7 @@ html {
 .navbar-nav .nav-link:hover {
     color: #8A4F7D !important;
 }
+
 
 /* Ajustes específicos para el menú hamburguesa */
 @media (max-width: 768px) {
@@ -247,6 +240,7 @@ html {
     padding: 40px 0;
     color: #333;
     font-family: Arial, sans-serif;
+    
 }
 
 
@@ -421,13 +415,20 @@ html {
 /*PAGINA DE LISTA DE PRODUCTOS*/
 #encabezadoListaProd{
     background: url("fotosPaginas/fotosPagListaProductos/header.jpg") no-repeat center center/cover;
-    min-height: 800px; /* O la altura que necesites */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
+#botonListaProd {
+    background-color: #83AF9B; /* Color verde agua */
+    color: white; /* Letras blancas */
+    padding: 10px 20px; /* Espacio interno */
+    border: none; /* Elimina el borde */
+    max-width: 200px; /* Tamaño máximo */
+    text-align: center; /* Centra el texto */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+    width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
+    margin: 6px auto; /* Ajusta el margen según sea necesario */
+
+}
 
 /*INICIAR SESION*/
 #encabezadois{
@@ -437,13 +438,47 @@ html {
 
 /*REGISTRATE*/
 #encabezadoReg{
-    background: url("fotosPaginas/fotosPagNosotras/Registrate.jpg") no-repeat center center/cover;
+    background: url("fotosPaginas/fotosPagNosotras/Flor\ naranja.jpg") no-repeat center center/cover;
+    width: 100%;  /* Se ajusta al ancho del contenedor */
+    max-height: 300px; /* Limita la altura máxima */
+    object-fit: cover; /* Recorta la imagen para que encaje sin distorsionarse */
 }   
 
+#botonregistrate{
+    background-color: #83AF9B; /* Color verde agua */
+    color: white; /* Letras blancas */
+    padding: 10px 20px; /* Espacio interno */
+    border: none; /* Elimina el borde */
+    max-width: 200px; /* Tamaño máximo */
+    text-align: center; /* Centra el texto */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+    width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
+    margin: 6px auto; /* Ajusta el margen según sea necesario */
+} 
 
 /*CARRITO DE COMPRAS*/
 #encabezadoCarrito {
     background: url("fotosPaginas/fotosCarritoCompra/bouque.jpg") no-repeat center center/cover;
+}
+
+#mainCarrito .col-md-4{
+    padding: 10px;
+}
+
+#mainCarrito .card-text {
+    font-family: "Inter", sans-serif;
+    font-size-adjust: initial;
+    font-size: 40px; /* Usa viewport width para que el tamaño del texto sea proporcional al ancho de la ventana */
+    text-align: center;
+    font-weight: 600;
+}
+
+#mainCarrito .precio {
+    font-family: "Inter", sans-serif;
+    font-size-adjust: initial;
+    font-size: 20px; /* Usa viewport width para que el tamaño del texto sea proporcional al ancho de la ventana */
+    text-align: left;
+    font-weight: 300;
 }
 
 /*PAGINA DE INICIAR SESIÓN*/
@@ -476,5 +511,6 @@ html {
     box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
     width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
     margin: 6px auto; /* Ajusta el margen según sea necesario */
+    border-radius: 10px; /* Bordes redondeados */
 
 }
