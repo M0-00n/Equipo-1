@@ -2,6 +2,7 @@ class ItemsController {
     constructor (currentId = 0){
         this.items = [];
         this.currentId = currentId;
+        this.loadItemsFromLocalStorage();
     }
 
     loadItemsFromLocalStorage() {
