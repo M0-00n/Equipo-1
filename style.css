@@ -240,6 +240,7 @@ html {
     padding: 40px 0;
     color: #333;
     font-family: Arial, sans-serif;
+    
 }
 
 
@@ -416,6 +417,18 @@ html {
     background: url("fotosPaginas/fotosPagListaProductos/header.jpg") no-repeat center center/cover;
 }
 
+#botonListaProd {
+    background-color: #83AF9B; /* Color verde agua */
+    color: white; /* Letras blancas */
+    padding: 10px 20px; /* Espacio interno */
+    border: none; /* Elimina el borde */
+    max-width: 200px; /* Tamaño máximo */
+    text-align: center; /* Centra el texto */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+    width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
+    margin: 6px auto; /* Ajusta el margen según sea necesario */
+
+}
 
 /*INICIAR SESION*/
 #encabezadois{
@@ -425,7 +438,10 @@ html {
 
 /*REGISTRATE*/
 #encabezadoReg{
-    background: url("fotosPaginas/fotosPagNosotras/Registrate.jpg") no-repeat center center/cover;
+    background: url("fotosPaginas/fotosPagNosotras/Flor\ naranja.jpg") no-repeat center center/cover;
+    width: 100%;  /* Se ajusta al ancho del contenedor */
+    max-height: 300px; /* Limita la altura máxima */
+    object-fit: cover; /* Recorta la imagen para que encaje sin distorsionarse */
 }   
 
 #botonregistrate{
