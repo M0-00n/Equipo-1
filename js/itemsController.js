@@ -18,16 +18,34 @@ class ItemsController {
     }
 
 
-    addItem(name, img, description){
+    addItem(name, img, description, price){
         const item = {
             id : this.currentId++,
             name : name,
             img: img,
             description : description,
+            price : price
         };
-        this.items.push(item);
-        this.saveItemsToLocalStorage(); // Guardar los productos actualizados en el LocalStorage
+
+        fetch("http://localhost:3000/items", { // Asegúrate de que el servidor json-server esté corriendo
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(item)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Producto guardado en el servidor:", data);
+            this.items.push(data);
+            this.saveItemsToLocalStorage(); // También guardamos en localStorage si es necesario
+        })
+        .catch(error => console.error("Error al guardar:", error));
     }
+
+    
+
+    
 
     removeItems(id){
         this.items = this.items.filter(item => item.id !== id);
