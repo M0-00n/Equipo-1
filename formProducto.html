@@ -43,15 +43,19 @@
                     <form id="newItemForm">
                         <div class="form-group">
                             <label for="newItemNameInput">Nombre</label>
-                            <input type="text" class="form-control" id="newItemNameInput">
+                            <input type="text" class="form-control" id="newItemNameInput" required minlength="5" maxlength="50">
                         </div>
                         <div class="form-group">
                             <label for="newItemDescription">Descripción</label>
-                            <textarea type="text" class="form-control" id="newItemDescription"></textarea>
+                            <textarea type="text" class="form-control" id="newItemDescription" required minlength="10" maxlength="200"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="newItemImage">Imagen</label>
-                            <textarea type="text" class="form-control" id="newItemImage"></textarea>
+                            <textarea class="form-control" id="newItemImage" required pattern="https?://.*" required placeholder="https?://.*"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="newItemDescription">Precio</label>
+                            <textarea type="text" class="form-control" id="newItemDescription" required placeholder="Ejemplo: $10.99" maxlength="6"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="newItemPrice">Precio</label>
