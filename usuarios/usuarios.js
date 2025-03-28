@@ -1,34 +1,39 @@
-const dbfile="db.json"; //nombre del archivo de json que vamos a tener
-if (!fs.existsSync(dbfile)){ //si no existe este file, vamos a crear otro
-    fs.writeFileSync(dbfile,JSON.stringify({usuarios:[]},null,2),"utf8") //verificar si el archov json existe y si no, crearlo con una base
-} 
 
-document.getElementById("registro-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita el comportamiento predeterminado del formulario
+document.getElementById("botonregistrate").addEventListener("click", async function(event) {
+    event.preventDefault(); // Evita el envío por defecto del formulario
 
-    // Capturar valores del formulario
+    // Obtener valores del formulario
     const nombre = document.getElementById("nombre").value;
     const apellido = document.getElementById("apellido").value;
     const correo = document.getElementById("correo").value;
-    const contrasena = document.getElementById("contrasena").value;
+    const contraseña = document.getElementById("contrasena").value;
     const telefono = document.getElementById("telefono").value;
     const delegacion = document.getElementById("delegacion").value;
     const direccion = document.getElementById("direccion").value;
-    const codigoPostal = document.getElementById("codigoPostal").value;
+    const codigoPostal = document.getElementById("codigopostal").value;
 
-    // Crear objeto JSON
-    const usuario = {
-        nombre,
-        apellido,
-        correo,
-        contrasena,
-        telefono,
-        delegacion,
-        direccion,
-        codigoPostal
+    // Obtenemos los usuarios existentes para generar el siguiente ID
+let usuarios = await fetch("http://localhost:3000/usuarios")
+.then(res => res.json())
+.catch(error => console.error("Error al obtener usuarios:", error));
+
+// Generar el ID basado en el último usuario o 1 si no existen usuarios
+const id = usuarios.length ? usuarios[usuarios.length - 1].id + 1 : 1;
+
+// Crear el objeto con el ID
+const usuario = {
+        id: id,
+        nombre: nombre,
+        apellido: apellido,
+        correo: correo,
+        contraseña: contraseña,
+        telefono: telefono,
+        delegacion: delegacion,
+        direccion: direccion,
+        codigoPostal: codigoPostal
     };
 
-    // Enviar el objeto JSON a json-server
+    // Enviar solicitud POST al servidor
     fetch("http://localhost:3000/usuarios", {
         method: "POST",
         headers: {
@@ -36,12 +41,13 @@ document.getElementById("registro-form").addEventListener("submit", function(eve
         },
         body: JSON.stringify(usuario)
     })
-    .then(response => response.json())
-    .then(data => {
-        alert("Usuario registrado correctamente");
-        document.getElementById("registro-form").reset();
+    .then(response => {
+        if (response.ok) {
+            alert("Usuario registrado correctamente");
+            document.querySelector("form").reset(); // Limpiar formulario
+        } else {
+            alert("Error al registrar el usuario");
+        }
     })
-    .catch(error => {
-        console.error("Error al registrar el usuario:", error);
-    });
+    .catch(error => console.error("Error en la solicitud:", error));
 });
