@@ -1,0 +1,26 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Montse",
+      "apellido": "pineda",
+      "correo": "montse.pidi@gmail.com",
+      "contraseña": "1234lol",
+      "telefono": "5573307483",
+      "delegacion": "Benito Juárez",
+      "direccion": "maria magdalena 2",
+      "codigoPostal": "12453"
+    },
+    {
+      "id": 2,
+      "nombre": "Ana",
+      "apellido": "elizondo",
+      "correo": "ana@gmail.com",
+      "contraseña": "1235lol",
+      "telefono": "",
+      "delegacion": "Miguel Hidalgo",
+      "direccion": "juarez 180",
+      "codigoPostal": "75963"
+    }
+  ]
+}
