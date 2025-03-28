@@ -38,11 +38,11 @@
     <form class="row g-3">
           <div class="col-md-6">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
+            <input type="text" class="form-control" name="nombre" placeholder="Nombre" required minlength="5" maxlength="50">
           </div>
           <div class="col-md-6">
             <label for="nombre" class="form-label">Apellido</label>
-            <input type="text" class="form-control" name="apellido" placeholder="Apellido" required>
+            <input type="text" class="form-control" name="apellido" placeholder="Apellido" required minlength="5" maxlength="100">
           </div>
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Correo Electrónico</label>
@@ -50,7 +50,7 @@
         </div>
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" placeholder="Contraseña" id="inputPassword4">
+          <input type="password" class="form-control" placeholder="Contraseña" id="inputPassword4" required minlength="5" maxlength="15">
         </div>
         
           <div class="col-md-6">

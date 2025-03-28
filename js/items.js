@@ -13,6 +13,7 @@ function addItemCard(item){
         '        <div class="card-body">\n' +
         '           <h5 class="card-title">'+item.name+'</h5>\n' +
         '           <p class="card-text">'+item.description+'</p>\n' +
+        '           <p class="card-text"> $'+item.price+'</p>\n' +
         '        <a href="#" class="btn btn-primary">Add</a>\n' +
         '    </div>\n' +
         '</div>\n' +

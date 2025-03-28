@@ -15,8 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const name = document.getElementById("newItemNameInput").value;
         const description = document.getElementById("newItemDescription").value;
         const img = document.getElementById("newItemImage").value;
+        const price = document.getElementById("newItemPrice").value;
 
-        itemsController.addItem(name, img, description);
+        itemsController.addItem(name, img, description, price);
 
         alert("Producto añadido correctamente");
         newItemForm.reset(); // Limpia el formulario después de añadir el producto
