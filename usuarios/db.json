@@ -21,6 +21,50 @@
       "delegacion": "Miguel Hidalgo",
       "direccion": "juarez 180",
       "codigoPostal": "75963"
+    },
+    {
+      "id": 3,
+      "nombre": "2215",
+      "apellido": "4648",
+      "correo": "12456",
+      "contraseña": "zzvcx24",
+      "telefono": "min",
+      "delegacion": "Seleccione una opción...",
+      "direccion": "mapvih",
+      "codigoPostal": "zmnc"
+    },
+    {
+      "id": 4,
+      "nombre": "1245",
+      "apellido": "pineda",
+      "correo": "ana@gmail.com",
+      "contraseña": "123lol",
+      "telefono": "5573307483",
+      "delegacion": "Seleccione una opción...",
+      "direccion": "123",
+      "codigoPostal": "nnk"
+    },
+    {
+      "id": 5,
+      "nombre": "12154",
+      "apellido": "54654",
+      "correo": "57874",
+      "contraseña": "54",
+      "telefono": "mmknuo",
+      "delegacion": "Seleccione una opción...",
+      "direccion": "1654adfa",
+      "codigoPostal": "zxvzv"
+    },
+    {
+      "id": 6,
+      "nombre": "",
+      "apellido": "",
+      "correo": "",
+      "contraseña": "",
+      "telefono": "",
+      "delegacion": "Seleccione una opción...",
+      "direccion": "",
+      "codigoPostal": ""
     }
   ]
 }
