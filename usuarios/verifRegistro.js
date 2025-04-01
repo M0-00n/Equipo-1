@@ -261,6 +261,15 @@ FORMULARIO.addEventListener("submit", async (e) => {
   }
 });
 
+// Función para mostrar los errores en el formulario
+function mostrarError(campo, mensaje) {
+    const error = document.createElement("div");
+    error.classList.add("error", "text-danger");
+    error.innerText = mensaje;
+    campo.classList.add("is-invalid");
+    campo.parentNode.appendChild(error);
+}
+})
 // Validación en tiempo real para confirmar contraseña
 document.getElementById("contrasenaConfirmar").addEventListener("input", function() {
   const pass1 = document.getElementById("contrasena").value;
