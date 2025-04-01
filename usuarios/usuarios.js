@@ -6,7 +6,7 @@ const middlewares = jsonServer.defaults();
 // 1. Servir la interfaz web de JSON Server
 server.use(middlewares.static('node_modules/json-server/public'));
 
-// 2. Middleware para redirigir / a /usuarios
+// 2. Middleware para redirigir a usuarios //
 server.get('/', (req, res) => {
   res.redirect('/usuarios');
 });
