@@ -15,7 +15,7 @@ const ERRORES = {
   terminos: "Debes aceptar los términos y condiciones"
 };
 
-// ==================== FUNCIONES DE VALIDACIÓN ====================
+// FUNCIONES DE VALIDACION //
 
 function validarTexto(id, minLength) {
     const campo = document.getElementById(id);

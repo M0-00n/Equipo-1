@@ -430,6 +430,22 @@ html {
 
 }
 
+#list-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-img2 {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
 /*INICIAR SESION*/
 #encabezadois{
     background: url("fotosPaginas/fotosPagNosotras/Isesion.jpg") no-repeat center center/cover;
