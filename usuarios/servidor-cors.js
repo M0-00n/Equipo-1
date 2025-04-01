@@ -25,7 +25,7 @@ server.use((req, res, next) => {
   next();
 });
 
-// 2. Configuración existente (sin cambios)
+// 2. Configuración existente 
 server.use(middlewares);
 server.use(router);
 
