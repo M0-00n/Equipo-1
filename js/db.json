@@ -1,81 +1,11 @@
 {
   "items": [
     {
-      "id": "1",
-      "name": "Flores Azules",
-      "img": "https://cdn.unotv.com/images/2023/10/tipos-de-flores-azules-jpg-154626-1024x576.jpg",
-      "description": "Unas Bellas Flores Azules Espinas Rojas",
-      "price": "150"
-    },
-    {
-      "id": "2",
+      "id": 1,
       "name": "Tulipan",
       "img": "https://media.istockphoto.com/id/514370566/es/foto/tulip%C3%A1n-rosa-flores-frescas.jpg?s=612x612&w=0&k=20&c=hySND8bcN4o7vNZplGHamxdMbsQpMxRP119Sjgfmwns=",
       "description": "Perfectos para arreglos frescos y sofisticados, disponible en rosa, amarillo y blanco.",
-      "price": "70"
-    },
-    {
-      "id": "3",
-      "name": "Peonias",
-      "img": "https://i5.walmartimages.com/asr/a5ef040f-5816-43f8-accb-004bb59896c2.af649792a4a49e532dfea22c21294596.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
-      "description": "Perfectas para arreglos elegantes y románticos, disponibles en blanco y rosa.",
-      "price": "70"
-    },
-    {
-      "id": "4",
-      "name": "Gerberas",
-      "img": "https://m.media-amazon.com/images/I/719SdJJgEoL.jpg",
-      "description": "Perfectas para añadir un toque fresco y vibrante, disponibles en rojo, amarillo y rosa.",
-      "price": "70"
-    },
-    {
-      "id": "5",
-      "name": "Rosas",
-      "img": "https://fincasderosas.com/wp-content/uploads/2021/04/rosa-hermosa2.jpg",
-      "description": "Ideales para expresar amor y admiración, disponible en rojo, blanco, rosa y amarillo.",
-      "price": "50"
-    },
-    {
-      "id": "6",
-      "name": "Girasol",
-      "img": "https://floresyservicios.com/wp-content/uploads/2022/04/Girasol1.jpg",
-      "description": "Representa la alegría y la energía, ideal para crear arreglos llamativos y luminosos.",
-      "price": "70"
-    },
-    {
-      "id": "7",
-      "name": "Dahlia",
-      "img": "https://lilysgardenstore.com/cdn/shop/files/image_a2669d9b-8714-4f2d-9ef8-18ce57c73361_1200x1200.heic?v=1691254533",
-      "description": "Ideales para arreglos llamativos y elegantes. disponibles en rojo, rosa, naranja y blanco",
-      "price": "70"
-    },
-    {
-      "id": "8",
-      "name": "Lirio",
-      "img": "https://media.istockphoto.com/id/183384405/es/foto/lily-aislado.jpg?s=612x612&w=0&k=20&c=BdN9C43Sa2l-_Da9CrMzoshdE61KuI0Bet4QUKlxj6s=",
-      "description": "Aportan elegancia y fragancia a cualquier arreglo, disponibles en blanco, rosa, amarillo y naranja.",
-      "price": "50"
-    },
-    {
-      "id": "9",
-      "name": "Alstroemerias",
-      "img": "https://www.bloomsbythebox.com/img/product/xlarge/00352d__alstroemeria_pink.jpg",
-      "description": "Aportan un toque delicado y exótico, disponibles en tonos rosa, amarillo, naranja y blanco.",
-      "price": "60"
-    },
-    {
-      "id": "10",
-      "name": "Freesias",
-      "img": "https://i.etsystatic.com/10880665/r/il/712234/2949100515/il_fullxfull.2949100515_8k7j.jpg",
-      "description": "Perfectas para un aroma dulce y fresco, disponibles en amarillo, blanco, rosa y morado. ",
-      "price": "60"
-    },
-    {
-      "id": 4,
-      "name": "peonias",
-      "img": "https://happyfridayshop.com/cdn/shop/files/Arreglo_Peonias_Rosas_Artificiales_2.jpg?v=1688428188",
-      "description": "peonias rosas",
-      "price": "70"
+      "price": "70.00"
     }
   ]
 }
