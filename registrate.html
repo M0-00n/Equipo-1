@@ -32,23 +32,29 @@
             </div>
         </nav>
     </header>
-    <div class="container"> 
+    <div>
+      <h1 style="text-align: center; padding: 15px;"  class="h1TipoLetra">Registro</h1>
+    </div>
+
+
+
+    <div class="container" id="registrate"> 
       <form id="formRegistroUsuario" class="row g-3" novalidate>
           <div class="col-md-6">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required minlength="5" maxlength="50">
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre (No debe incluir números)" required minlength="5" maxlength="50">
           </div>
           <div class="col-md-6">
             <label for="apellido" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required minlength="5" maxlength="100">
+            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido (No debe incluir números)" required minlength="5" maxlength="100">
           </div>
         <div class="col-md-6">
           <label for="correo" class="form-label">Correo Electrónico</label>
-          <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo Electrónico">
+          <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo Electrónico (Ejem:correo@gmail.com)">
         </div>
         <div class="col-md-6">
           <label for="contrasena" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña" required minlength="5" maxlength="15">
+          <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña (Debe ser mayor a 5 caracteres)" required minlength="5" maxlength="15">
         </div>
 
         <div class="col-md-6">
@@ -91,7 +97,7 @@
         
         <div class="col-md-6">
           <label for="direccion" class="form-label">Dirección</label>
-          <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección">
+          <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección (Calle, número)">
         </div>
         <div class="col-md-6">
           <label for="codigopostal" class="form-label">Código Postal</label>

@@ -301,6 +301,34 @@ html {
 
 /*PÁGINA PRINCIPAL*/
 
+
+.ramoHotspot {
+    background-color: rgb(253, 253, 253);
+    height: 100hv;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    
+
+    h1 {
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: #fe4365;
+        }
+
+    div {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        
+        
+
+    }
+
+}
+
 #h1Index {
     font-family: "Inter", sans-serif;
     font-size-adjust: initial;
@@ -453,6 +481,13 @@ html {
 
 
 /*REGISTRATE*/
+
+.registrate {
+    @media (max-width:1024px){
+        align-items: center;
+    }
+}
+
 #encabezadoReg{
     background: url("fotosPaginas/fotosPagNosotras/Flor\ naranja.jpg") no-repeat center center/cover;
     width: 100%;  /* Se ajusta al ancho del contenedor */
@@ -499,6 +534,7 @@ html {
 
 /*PAGINA DE INICIAR SESIÓN*/
 .containeriniciasesion {
+    font-family: "Inter", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -506,7 +542,7 @@ html {
 }
 
 #forminiciasesion {
-    
+    font-family: "Inter", sans-serif;
     justify-content: center;
     align-items: center;
     padding: 5px;
@@ -518,6 +554,7 @@ html {
 
 
 #botoniniciarsesion {
+    font-family: "Inter", sans-serif;
     background-color: #83AF9B; /* Color verde agua */
     color: white; /* Letras blancas */
     padding: 10px 20px; /* Espacio interno */
