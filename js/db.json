@@ -71,24 +71,10 @@
       "price": "60"
     },
     {
-      "id": "11",
-      "name": "Flores rojas",
-      "img": "dany.jpg",
-      "description": "Espinas azules",
-      "price": "3000"
-    },
-    {
-      "id": "12",
-      "name": "Flores Moradas",
-      "img": "fanny.jpg",
-      "description": "Espinas Verdes",
-      "price": "3000"
-    },
-    {
-      "id": 0,
-      "name": "Flores Azules",
-      "img": "florazul.jpg",
-      "description": "Flores azules",
+      "id": 4,
+      "name": "peonias",
+      "img": "https://happyfridayshop.com/cdn/shop/files/Arreglo_Peonias_Rosas_Artificiales_2.jpg?v=1688428188",
+      "description": "peonias rosas",
       "price": "70"
     }
   ]
