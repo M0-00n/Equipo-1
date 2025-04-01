@@ -4,7 +4,7 @@ const itemsController = new ItemsController();
 
 
 function addItemCard(item){
-    const itemHTML = '<div class="card mb-3 container" style="max-width: 540px;">\n' +
+    const itemHTML = '<div class="card mb-3 container py-4" style="max-width: 540px;">\n' +
         '   <div class="row no-gutters">\n' +
         '   <div class="col-md-4">\n'+
         '       <img src="'+item.img+'" class="card-img" alt="...">\n'+
