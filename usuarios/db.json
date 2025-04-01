@@ -53,7 +53,7 @@
       "delegacion": "Xochimilco",
       "direccion": "iguana verde 34",
       "codigoPostal": "90876",
-      "id": 5
+      "id": "5"
     },
     {
       "nombre": "Estefania",
@@ -64,7 +64,7 @@
       "delegacion": "Xochimilco",
       "direccion": "iguana roja3",
       "codigoPostal": "76543",
-      "id": 6
+      "id": "6"
     },
     {
       "nombre": "Estefania",
@@ -75,9 +75,9 @@
       "delegacion": "Cuauhtémoc",
       "direccion": "IguanaRoja32",
       "codigoPostal": "38563",
-      "id": 7
+      "id": "7"
     },
-    { 
+    {
       "nombre": "Estefania",
       "apellido": "Leon",
       "correo": "estefania.leon.rabadan3@gmail.com",
@@ -86,7 +86,18 @@
       "delegacion": "Gustavo A. Madero",
       "direccion": "IguanaVerde3",
       "codigoPostal": "32145",
-      "id": 8
+      "id": "8"
+    },
+    {
+      "id": 9,
+      "nombre": "Ana Karen",
+      "apellido": "Godinez",
+      "correo": "anakaren@gmail.com",
+      "contraseña": "12345",
+      "telefono": "6666222222",
+      "delegacion": "Álvaro Obregón",
+      "direccion": "lomas san garza",
+      "codigoPostal": "12345"
     }
   ]
 }
