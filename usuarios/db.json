@@ -90,14 +90,14 @@
     },
     {
       "id": 9,
-      "nombre": "Ana Karen",
-      "apellido": "Godinez",
-      "correo": "anakaren@gmail.com",
-      "contraseña": "12345",
-      "telefono": "6666222222",
-      "delegacion": "Álvaro Obregón",
-      "direccion": "lomas san garza",
-      "codigoPostal": "12345"
+      "nombre": "Montse",
+      "apellido": "Pineda",
+      "correo": "635@gmail.com",
+      "contraseña": "montse",
+      "telefono": "5573307483",
+      "delegacion": "Azcapotzalco",
+      "direccion": "maria magdalena 2",
+      "codigoPostal": "54896"
     }
   ]
 }
