@@ -1,7 +1,7 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Montse",
       "apellido": "pineda",
       "correo": "montse.pidi@gmail.com",
@@ -12,7 +12,7 @@
       "codigoPostal": "12453"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Ana",
       "apellido": "elizondo",
       "correo": "ana@gmail.com",
@@ -21,6 +21,72 @@
       "delegacion": "Miguel Hidalgo",
       "direccion": "juarez 180",
       "codigoPostal": "75963"
+    },
+    {
+      "id": "3",
+      "nombre": "2215",
+      "apellido": "4648",
+      "correo": "12456",
+      "contraseña": "zzvcx24",
+      "telefono": "min",
+      "delegacion": "Seleccione una opción...",
+      "direccion": "mapvih",
+      "codigoPostal": "zmnc"
+    },
+    {
+      "id": "4",
+      "nombre": "1245",
+      "apellido": "pineda",
+      "correo": "ana@gmail.com",
+      "contraseña": "123lol",
+      "telefono": "5573307483",
+      "delegacion": "Seleccione una opción...",
+      "direccion": "123",
+      "codigoPostal": "nnk"
+    },
+    {
+      "nombre": "Estefania",
+      "apellido": "Leon",
+      "correo": "estefania.leon.rabadan@gmail.com",
+      "contraseña": "Leon1120",
+      "telefono": "7331023634",
+      "delegacion": "Xochimilco",
+      "direccion": "iguana verde 34",
+      "codigoPostal": "90876",
+      "id": 5
+    },
+    {
+      "nombre": "Estefania",
+      "apellido": "Leon",
+      "correo": "estefania.leon.rabadan2@gmail.com",
+      "contraseña": "Leon1120",
+      "telefono": "7331023634",
+      "delegacion": "Xochimilco",
+      "direccion": "iguana roja3",
+      "codigoPostal": "76543",
+      "id": 6
+    },
+    {
+      "nombre": "Estefania",
+      "apellido": "Leon",
+      "correo": "estefania.leon.rabadan@gmail2.com",
+      "contraseña": "Leon1120",
+      "telefono": "7331023634",
+      "delegacion": "Cuauhtémoc",
+      "direccion": "IguanaRoja32",
+      "codigoPostal": "38563",
+      "id": 7
+    },
+    { 
+      "nombre": "Estefania",
+      "apellido": "Leon",
+      "correo": "estefania.leon.rabadan3@gmail.com",
+      "contraseña": "Leon1120",
+      "telefono": "7331023634",
+      "delegacion": "Gustavo A. Madero",
+      "direccion": "IguanaVerde3",
+      "codigoPostal": "32145",
+      "id": 8
     }
   ]
 }

@@ -1,53 +1,41 @@
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('db.json');
+const middlewares = jsonServer.defaults();
 
-document.getElementById("botonregistrate").addEventListener("click", async function(event) {
-    event.preventDefault(); // Evita el envío por defecto del formulario
+// 1. Servir la interfaz web de JSON Server
+server.use(middlewares.static('node_modules/json-server/public'));
 
-    // Obtener valores del formulario
-    const nombre = document.getElementById("nombre").value;
-    const apellido = document.getElementById("apellido").value;
-    const correo = document.getElementById("correo").value;
-    const contraseña = document.getElementById("contrasena").value;
-    const telefono = document.getElementById("telefono").value;
-    const delegacion = document.getElementById("delegacion").value;
-    const direccion = document.getElementById("direccion").value;
-    const codigoPostal = document.getElementById("codigopostal").value;
+// 2. Middleware para redirigir a usuarios //
+server.get('/', (req, res) => {
+  res.redirect('/usuarios');
+});
 
-    // Obtenemos los usuarios existentes para generar el siguiente ID
-let usuarios = await fetch("http://localhost:3000/usuarios")
-.then(res => res.json())
-.catch(error => console.error("Error al obtener usuarios:", error));
+// 3. Middleware para ordenar ID primero (tu requerimiento)
+server.use((req, res, next) => {
+  const originalJson = res.json;
+  res.json = (data) => {
+    if (data && typeof data === 'object') {
+      const reorderId = (obj) => {
+        if (!obj || Array.isArray(obj)) return obj;
+        const { id, ...rest } = obj;
+        return id !== undefined ? { id, ...rest } : obj;
+      };
+      data = Array.isArray(data) ? data.map(reorderId) : reorderId(data);
+    }
+    originalJson.call(res, data);
+  };
+  next();
+});
 
-// Generar el ID basado en el último usuario o 1 si no existen usuarios
-const id = usuarios.length ? usuarios[usuarios.length - 1].id + 1 : 1;
+// Configuración CORS
+server.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
-// Crear el objeto con el ID
-const usuario = {
-        id: id,
-        nombre: nombre,
-        apellido: apellido,
-        correo: correo,
-        contraseña: contraseña,
-        telefono: telefono,
-        delegacion: delegacion,
-        direccion: direccion,
-        codigoPostal: codigoPostal
-    };
+server.use(router);
 
-    // Enviar solicitud POST al servidor
-    fetch("http://localhost:3000/usuarios", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(usuario)
-    })
-    .then(response => {
-        if (response.ok) {
-            alert("Usuario registrado correctamente");
-            document.querySelector("form").reset(); // Limpiar formulario
-        } else {
-            alert("Error al registrar el usuario");
-        }
-    })
-    .catch(error => console.error("Error en la solicitud:", error));
+server.listen(3000, () => {
+  console.log('✨ Interfaz web disponible en: http://localhost:3000');
 });
