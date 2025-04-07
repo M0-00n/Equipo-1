@@ -11,15 +11,21 @@ document.getElementById('forminiciasesion').addEventListener('submit', async fun
         const usuarios = await respuesta.json();
 
         //buscar si el usuario ya existe 
-        const usuarioExistente = usuarios.find(u=> u.correo === usuarioEmail && u.contrasena === usuarioContrasena);
+        const usuarioExistente = usuarios.find(u => u.correo === usuarioEmail);
 
-        if(usuarioExistente) {
+    if (usuarioExistente){
+        if(usuarioExistente.contraseña === usuarioContrasena){
             alert("Bienvenido!")
             window.location.href = 'index.html'
         } else {
-            alert("Usuario no existene. \n Vamos a registrarte!")
-            window.location.href = 'registrate.html'
+            alert ("Contraseña incorrecta")
         }
+    } else {
+        alert("Usuario no existente. \n Vamos a registrarte!")
+        window.location.href = 'registrate.html'
+    }
+
+
 
     } catch (error) {
         console.error("Error al conectar con la base de datos")
