@@ -1,13 +1,20 @@
 /*TODAS LAS PÁGINAS*/
-html {
+html, body {
     height: 100%;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+main {
+    flex: 1;
 }
 
 .container {
@@ -443,6 +450,11 @@ html {
 /*PAGINA DE LISTA DE PRODUCTOS*/
 #encabezadoListaProd{
     background: url("fotosPaginas/fotosPagListaProductos/header.jpg") no-repeat center center/cover;
+    min-height: 800px; /* O la altura que necesites */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #botonListaProd {
