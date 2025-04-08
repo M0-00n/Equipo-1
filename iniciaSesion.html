@@ -33,28 +33,28 @@
         </nav>
     </header>
 
-<main>
-    <div class="containeriniciasesion align-items-center;" style="display:flex; flex-direction: column">
-        <div>
-            <h1 style="text-align: center; padding: 15px; margin-top: 15px; "  class="h1TipoLetra">Inicio de sesión</h1>
+    <main>
+        <div class="containeriniciasesion align-items-center;" style="display:flex; flex-direction: column">
+            <div>
+                <h1 style="text-align: center; padding: 15px; margin-top: 15px; "  class="h1TipoLetra">Inicio de sesión</h1>
+            </div>
+            <form id="forminiciasesion">
+                <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" placeholder="Correo Electrónico" id="usuarioEmail" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico.</div>
+                </div>
+                <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" placeholder="Contraseña" id="usuarioContrasena">
+                </div>
+                <div class="mb-3 form-check">
+                    <p class="pTipoLetra">¿Aún no tienes una cuenta?<a href="registrate.html" class="pTipoLetra" style="color:#FC9D9A" > Registrarse</a></p>
+                </div>
+                <button id="botoniniciarsesion" type="submit" class="col-12 d-flex justify-content-center">Enviar</button>
+            </form>
         </div>
-        <form id="forminiciasesion">
-            <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" placeholder="Correo Electrónico" id="usuarioEmail" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico.</div>
-            </div>
-            <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" placeholder="Contraseña" id="usuarioContrasena">
-            </div>
-            <div class="mb-3 form-check">
-                <p class="pTipoLetra">¿Aún no tienes una cuenta?<a href="registrate.html" class="pTipoLetra" style="color:#FC9D9A" > Registrarse</a></p>
-            </div>
-            <button id="botoniniciarsesion" type="submit" class="col-12 d-flex justify-content-center">Enviar</button>
-        </form>
-        
-    </div>
+    </main>
 
     <footer id="footer" class="footer mt-5 container-fluid">
         <div class="container">
