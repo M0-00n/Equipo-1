@@ -450,6 +450,11 @@ main {
 /*PAGINA DE LISTA DE PRODUCTOS*/
 #encabezadoListaProd{
     background: url("fotosPaginas/fotosPagListaProductos/header.jpg") no-repeat center center/cover;
+    min-height: 800px; /* O la altura que necesites */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #botonListaProd {
