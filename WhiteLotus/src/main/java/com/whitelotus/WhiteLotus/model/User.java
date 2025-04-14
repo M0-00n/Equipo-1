@@ -6,12 +6,12 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_usuario")
+    @Column(name = "id_users")
     private Long id;
 
     @Column (length = 50, nullable = false, unique = true)
@@ -25,13 +25,13 @@ public class User {
     @Column (length = 10, nullable = false)
     private String phoneNumber;
 
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-    private List<Pedido> orders;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Order> orders;
 
     public User() {
     }
 
-    public User(Long id, String email, String name, String lastname, String password, String phoneNumber, List<Pedido> orders) {
+    public User(Long id, String email, String name, String lastname, String password, String phoneNumber, List<Order> orders) {
         this.id = id;
         this.email = email;
         this.name = name;
@@ -89,11 +89,11 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public List<Pedido> getOrders() {
+    public List<Order> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<Pedido> orders) {
+    public void setOrders(List<Order> orders) {
         this.orders = orders;
     }
 
