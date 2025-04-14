@@ -6,16 +6,16 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity
-@Table(name = "envios")
-public class Envio {
+@Table(name = "shippings")
+public class Shipping {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_envio")
+    @Column(name = "id_shipping")
     private Long id;
 
-    @Column(name = "date_envio", nullable = false, columnDefinition ="DATETIME" ) //columnDefinition Define el tipo de dato que tendrá la columna, DATETIME tipo de dato de SQL
-    private LocalDateTime dateEnvio;
+    @Column(name = "date_shipping", nullable = false, columnDefinition ="DATETIME" ) //columnDefinition Define el tipo de dato que tendrá la columna, DATETIME tipo de dato de SQL
+    private LocalDateTime dateShipping;
 
     @Column(length =24, nullable = false)
     private String delegacion;
@@ -25,19 +25,19 @@ public class Envio {
     private String codigoPostal;
 
     @OneToOne
-    @JoinColumn(name = "envio_id_pedido")
-    private Pedido pedido;
+    @JoinColumn(name = "shipping_id_order")
+    private Order order;
 
-    public Envio() {
+    public Shipping() {
     }
 
-    public Envio(Long id, LocalDateTime dateEnvio, String delegacion, String calleNumero, String codigoPostal, Pedido pedido) {
+    public Shipping(Long id, LocalDateTime dateShipping, String delegacion, String calleNumero, String codigoPostal, Order order) {
         this.id = id;
-        this.dateEnvio = dateEnvio;
+        this.dateShipping = dateShipping;
         this.delegacion = delegacion;
         this.calleNumero = calleNumero;
         this.codigoPostal = codigoPostal;
-        this.pedido = pedido;
+        this.order = order;
     }
 
     public Long getId() {
@@ -48,12 +48,12 @@ public class Envio {
         this.id = id;
     }
 
-    public LocalDateTime getDateEnvio() {
-        return dateEnvio;
+    public LocalDateTime getDateShipping() {
+        return dateShipping;
     }
 
-    public void setDateEnvio(LocalDateTime dateEnvio) {
-        this.dateEnvio = dateEnvio;
+    public void setDateShipping(LocalDateTime dateShipping) {
+        this.dateShipping = dateShipping;
     }
 
     public String getDelegacion() {
@@ -80,34 +80,34 @@ public class Envio {
         this.codigoPostal = codigoPostal;
     }
 
-    public Pedido getPedido() {
-        return pedido;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setPedido(Pedido pedido) {
-        this.pedido = pedido;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     @Override
     public String toString() {
-        return "Envio{" +
+        return "Shipping{" +
                 "id=" + id +
-                ", dateEnvio=" + dateEnvio +
+                ", dateShipping=" + dateShipping +
                 ", delegacion='" + delegacion + '\'' +
                 ", calleNumero='" + calleNumero + '\'' +
                 ", codigoPostal='" + codigoPostal + '\'' +
-                ", pedido=" + pedido +
+                ", order=" + order +
                 '}';
     }
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof Envio envio)) return false;
-        return Objects.equals(id, envio.id) && Objects.equals(dateEnvio, envio.dateEnvio) && Objects.equals(delegacion, envio.delegacion) && Objects.equals(calleNumero, envio.calleNumero) && Objects.equals(codigoPostal, envio.codigoPostal) && Objects.equals(pedido, envio.pedido);
+        if (!(o instanceof Shipping shipping)) return false;
+        return Objects.equals(id, shipping.id) && Objects.equals(dateShipping, shipping.dateShipping) && Objects.equals(delegacion, shipping.delegacion) && Objects.equals(calleNumero, shipping.calleNumero) && Objects.equals(codigoPostal, shipping.codigoPostal) && Objects.equals(order, shipping.order);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, dateEnvio, delegacion, calleNumero, codigoPostal, pedido);
+        return Objects.hash(id, dateShipping, delegacion, calleNumero, codigoPostal, order);
     }
 }
