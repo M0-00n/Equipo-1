@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/users")
@@ -34,13 +35,30 @@ public class UserController {
         }
     }
 
-    @PostMapping
+    @PostMapping("/sign-up")
     public ResponseEntity<User> createUser(@RequestBody User newUser){
         if(userService.findUserByEmail(newUser.getEmail()) != null){
             return new ResponseEntity<>(HttpStatus.CONFLICT);
         }
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.createUser(newUser));
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> loginUser(@RequestBody Map<String, String> credentials) { //recibir datos del cuerpo de la petición en forma de un Map (diccionario) con claves tipo "email" y "password"
+        String email = credentials.get("email");
+        String password = credentials.get("password");
+
+        User user = userService.findUserByEmail(email);
+
+        if (user == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El correo no está registrado");
+        } else if (!user.getPassword().equals(password)) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Contraseña incorrecta");
+        } else {
+            return ResponseEntity.ok(user);
+        }
+    }
+
 
 //    @PostMapping
 //    public ResponseEntity<User> createUser(@RequestBody User newUser){
