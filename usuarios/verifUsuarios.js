@@ -1,33 +1,32 @@
-document.getElementById('forminiciasesion').addEventListener('submit', async function (event) {
-    
-    event.preventDefault();
+const login = async () => {
+    const credentials = {
+        email: document.getElementById("usuarioEmail").value,
+        password: document.getElementById("usuarioContrasena").value
+    };
 
-    const usuarioEmail = document.getElementById('usuarioEmail').value;
-    const usuarioContrasena = document.getElementById('usuarioContrasena').value;
+    const response = await fetch("http://localhost:8080/users/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(credentials)
+    });
 
-    try {
-        //Peticion GEt para obtner los usuarios
-        const respuesta= await fetch('http://localhost:3000/usuarios');
-        const usuarios = await respuesta.json();
+    const text = await response.text(); // ← importante: como es texto plano
 
-        //buscar si el usuario ya existe 
-        const usuarioExistente = usuarios.find(u => u.correo === usuarioEmail);
-
-    if (usuarioExistente){
-        if(usuarioExistente.contraseña === usuarioContrasena){
-            alert("Bienvenido!")
-            window.location.href = 'index.html'
-        } else {
-            alert ("Contraseña incorrecta")
+    if (response.ok) {
+        const user = JSON.parse(text);
+        alert("Login exitoso. Bienvenido " + user.name);
+        window.location.href = "index.html";
+    } else if (response.status === 404) {
+        alert("Correo no registrado. ¿Quieres registrarte?");
+        // puedes redirigir o mostrar un botón también
+        if (confirm("¿Deseas ir a la página de registro?")) {
+            window.location.href = "signup.html";
         }
+    } else if (response.status === 401) {
+        alert("Contraseña incorrecta. Intenta nuevamente.");
     } else {
-        alert("Usuario no existente. \n Vamos a registrarte!")
-        window.location.href = 'registrate.html'
+        alert("Error desconocido: " + text);
     }
-
-
-
-    } catch (error) {
-        console.error("Error al conectar con la base de datos")
-    }
-});
+};
