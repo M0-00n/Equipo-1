@@ -39,7 +39,11 @@ public class ProductsService {
 
     public Products updateProducts(Products products, Long id) {
         return productsRepository.findById(id).map(shippingMapping -> {
+            shippingMapping.setProductType(products.getProductType());
             shippingMapping.setProductName(products.getProductName());
+            shippingMapping.setProductDescription(products.getProductDescription());
+            shippingMapping.setImageUrl(products.getImageUrl());
+            shippingMapping.setProduct_price(products.getProduct_price());
             shippingMapping.setQuantity(products.getQuantity());
             return productsRepository.save(shippingMapping);
         }).orElseThrow(()-> new ProductsNotFoundException(id));
