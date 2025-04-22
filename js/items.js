@@ -1,4 +1,5 @@
-const URL_API = "http://localhost:8080/products";
+const URL_API = "http://localhost:8081/products";
+const paginaActual = window.location.pathname.split("/").pop();
 
 // Cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', () => {
@@ -44,19 +45,27 @@ function mostrarProducto(producto) {
         flores: 'list-items',
         follaje: 'list-items-follaje',
         papel: 'list-items-papel'
-        // liston: 'list-items-liston',
-        // tarjeta: 'list-items-tarjeta'
     };
 
     const tipo = producto.productType.toLowerCase();
     const seccionId = contenedores[tipo];
-
     if (!seccionId) return;
-    const contenedor = document.getElementById(seccionId);
 
+    const contenedor = document.getElementById(seccionId);
     const tarjeta = document.createElement('div');
     tarjeta.className = 'card mb-3 container py-4';
     tarjeta.style.maxWidth = '540px';
+
+    let botonesHTML = '';
+
+    if (paginaActual === 'listaProductos.html') {
+        botonesHTML = `<button id="botonListaProd" type="submit" class="col-12 d-flex justify-content-center"onclick='agregarAlCarrito(${JSON.stringify(producto).replace(/'/g, "\\'")})'>Agregar</button>`;
+    } else if (paginaActual === 'formProducto.html') {
+        botonesHTML = `
+            <button class="btn btn-warning btn-sm" onclick="editarProducto(${producto.id})">Editar</button>
+            <button class="btn btn-danger btn-sm" onclick="eliminarProducto(${producto.id})">Eliminar</button>
+        `;
+    }
 
     tarjeta.innerHTML = `
         <div class="row no-gutters">
@@ -69,8 +78,7 @@ function mostrarProducto(producto) {
                     <p class="pTipoLetra">${producto.productDescription}</p>
                     <p class="pTipoLetra">$${producto.product_price}</p>
                     <div class="d-flex justify-content-between mt-3">
-                        <button class="btn btn-warning btn-sm" onclick="editarProducto(${producto.id})">Editar</button>
-                        <button class="btn btn-danger btn-sm" onclick="eliminarProducto(${producto.id})">Eliminar</button>
+                        ${botonesHTML}
                     </div>
                 </div>
             </div>
@@ -79,6 +87,7 @@ function mostrarProducto(producto) {
 
     contenedor.appendChild(tarjeta);
 }
+
 
 // Agregar nuevo producto
 function agregarProducto() {
