@@ -66,6 +66,14 @@ main {
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+.tituloRosa {
+    font-family: "Pacifico", cursive;
+    font-weight: 100;
+    font-size: 1.8rem;
+    color: #fe4365;
+    margin-bottom: 0.5rem;
+}
+
 .pTipoLetra {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -354,33 +362,346 @@ main {
 
 /*PÁGINA PRINCIPAL*/
 
+/* Sección de envío */
+.seccion-envio {
+    padding: 80px 0; /* Margen blanco superior e inferior */
+}
 
-.ramoHotspot {
-    background-color: rgb(253, 253, 253);
-    height: 100hv;
+.contenedor-envio {
+    background-color: #FBE9D3; 
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion-envio .img-envio {
     width: 100%;
+    max-width: 300px; 
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.seccion-envio .contenido-envio {
+    padding-left: 40px;
+}
+
+.seccion-envio .titulo-envio {
+    font-family: "Pacifico", cursive;
+    color: #FE4365; 
+    font-size: 5rem;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.seccion-envio .link-envio {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
+    text-decoration: none;
+    font-family: "Pacifico", cursive;
+    color: #FE4365; 
+    font-weight: 400;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
 
+.seccion-envio .flecha-envio {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+    @media (max-width: 576px) {
+    width:50px;
+    height: 50px;}
+}
+
+.seccion-envio .link-envio:hover {
+    color: #6a8f7d; /* Verde más oscuro al hover */
+}
+
+.seccion-envio .link-envio:hover .flecha-envio {
+    transform: translateX(4px); /* Efecto de movimiento en la flecha */
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contenedor-envio {
+        padding: 30px;
+    }
     
+    .seccion-envio .titulo-envio {
+        font-size: 2.5rem;
+    }
+    .seccion-envio .link-envio{
+        font-size: 1.8rem;
+    }
+}
 
-    h1 {
-        font-family: "Pacifico", cursive;
-        font-weight: 400;
-        font-style: normal;
-        color: #fe4365;
-        }
+@media (max-width: 768px) {
+    .seccion-envio .titulo-envio {
+        font-size: 2.5rem;
+    }
+    .contenedor-envio {
+        padding: 25px;
+    }
+    
+    .seccion-envio .row {
+        flex-direction: column;
+    }
+    
+    .seccion-envio .img-envio {
+        margin-bottom: 25px;
+        max-width: 250px;
+    }
+    
+    .seccion-envio .contenido-envio {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .seccion-envio .link-envio {
+        justify-content: center;
+    }
+}
 
-    div {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-left: 40px;
-        
-        
+@media (max-width: 576px) {
+    .seccion-envio {
+        padding: 60px 0;
+    }
+    
+    .seccion-envio .titulo-envio {
+        font-size: 2rem;
+    }
+    .seccion-envio .link-envio{
+        font-size: 1.5rem;
+    }
+}
 
+/* Carrusel tipo cartas - Estilos con scope específico */
+.carrusel-cartas {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.carrusel-cartas .container {
+    position: relative;
+}
+
+.carrusel-cartas .card-carrusel {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 0 15%;
+    transition: transform 0.3s ease;
+}
+
+.carrusel-cartas .carousel-inner {
+    padding: 20px 0;
+}
+
+.carrusel-cartas .card-carrusel img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carrusel-cartas .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.carrusel-cartas .btn-carrusel {
+    background-color: #83AF9B;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.carrusel-cartas .btn-carrusel:hover {
+    background-color: #6a8f7d;
+    transform: translateY(-2px);
+}
+
+/* Efecto para mostrar los items laterales */
+.carrusel-cartas .carousel-item {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.carrusel-cartas .carousel-item-next:not(.carousel-item-start),
+.carrusel-cartas .carousel-item-prev:not(.carousel-item-end) {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carrusel-cartas .carousel-item-next.carousel-item-start,
+.carrusel-cartas .carousel-item-prev.carousel-item-end {
+    transform: translateX(0);
+}
+
+.carrusel-cartas .carousel-item-next,
+.carrusel-cartas .active.carousel-item-end {
+    transform: translateX(25%) scale(0.8);
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.carrusel-cartas .carousel-item-prev,
+.carrusel-cartas .active.carousel-item-start {
+    transform: translateX(-25%) scale(0.8);
+    opacity: 0.7;
+    z-index: 0;
+}
+
+/* Controles del carrusel */
+.carrusel-cartas .carousel-control-prev,
+.carrusel-cartas .carousel-control-next {
+    width: 5%;
+    opacity: 1;
+}
+
+.carrusel-cartas .carousel-control-prev-icon,
+.carrusel-cartas .carousel-control-next-icon {
+    background-color: rgba(131, 175, 155, 0.7);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-size: 60%;
+    transition: all 0.3s ease;
+}
+
+.carrusel-cartas .carousel-control-prev-icon:hover,
+.carrusel-cartas .carousel-control-next-icon:hover {
+    background-color: rgba(131, 175, 155, 0.9);
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carrusel-cartas .card-carrusel {
+        margin: 0 5%;
+    }
+    
+    .carrusel-cartas .carousel-item-next,
+    .carrusel-cartas .active.carousel-item-end {
+        transform: translateX(15%) scale(0.9);
     }
 
+    .carrusel-cartas .carousel-item-prev,
+    .carrusel-cartas .active.carousel-item-start {
+        transform: translateX(-15%) scale(0.9);
+    }
+    
+    .carrusel-cartas .card-carrusel img {
+        height: 200px;
+    }
+    
+    .carrusel-cartas .carousel-control-prev,
+    .carrusel-cartas .carousel-control-next {
+        width: 10%;
+    }
 }
+
+/* Sección de registro/login - Estilos bien escopados */
+.seccion-registro {
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.seccion-registro .contenedor-registro {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion-registro .contenido-registro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.seccion-registro__titulo {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    font-size: 1.8rem;
+    white-space: nowrap;
+}
+
+.seccion-registro__botones {
+    display: flex;
+    gap: 20px;
+}
+
+.seccion-registro__btn {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.seccion-registro__btn--login {
+    background-color: #83AF9B;
+    color: white;
+}
+
+.seccion-registro__btn--registro {
+    background-color: #cad0c3;
+    color: #000;
+}
+
+.seccion-registro__btn--login:hover {
+    background-color: #6a8f7d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.seccion-registro__btn--registro:hover {
+    background-color: #b8bfb0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive - Cambia a vertical en pantallas pequeñas */
+@media (max-width: 768px) {
+    .seccion-registro .contenido-registro {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .seccion-registro__botones {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .seccion-registro__btn {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+    
+    .seccion-registro__titulo {
+        white-space: normal;
+        text-align: center;
+    }
+}
+/* Fin Sección de registro/login*/
 
 #h1Index {
     font-family: "Inter", sans-serif;

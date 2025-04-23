@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltips Section</title>
+    <link rel="stylesheet" href="tooltips-styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap');
+    </style>
+</head>
+<body>
+    <section class="tts-container">
+        <div class="tts-title-text">
+            <h1 class="tts-heading">Personaliza tu bouquet</h1>
+        </div>
+        <div class="tts-image-container">
+            <img src="./fotosPaginas/fotosPagPrincipal/ram_hotdpot.png" alt="Ramo de flores" class="tts-image">
+            <div class="tts-tooltips-wrapper">
+                <!-- Tooltip 1: Follaje -->
+                <div class="tts-tooltip" data-tts-x="30" data-tts-y="15">
+                    <div class="tts-pin"></div>
+                    <div class="tts-tooltip-content">
+                        <h2 class="tts-tooltip-title">Follaje</h2>
+                        <p class="tts-tooltip-text">Elije el follaje de tu agrado entre eucalipto, limonaria, pino y muchos más</p>
+                    </div>
+                </div>
+                <!-- Tooltip 2: Flores -->
+                <div class="tts-tooltip" data-tts-x="58" data-tts-y="25">
+                    <div class="tts-pin"></div>
+                    <div class="tts-tooltip-content">
+                        <h2 class="tts-tooltip-title">Flores</h2>
+                        <p class="tts-tooltip-text">Elije las flores que queden con el estilo de tu arreglo</p>
+                    </div>
+                </div>
+                <!-- Tooltip 3: Envoltorio -->
+                <div class="tts-tooltip" data-tts-x="35" data-tts-y="40">
+                    <div class="tts-pin"></div>
+                    <div class="tts-tooltip-content">
+                        <h2 class="tts-tooltip-title">Envolotorio</h2>
+                        <p class="tts-tooltip-text">Elije el estilo y color de tu papel y listón</p>
+                    </div>
+                </div>
+                <!-- Tooltip 4: Tarjeta -->
+                <div class="tts-tooltip" data-tts-x="53" data-tts-y="65">
+                    <div class="tts-pin"></div>
+                    <div class="tts-tooltip-content">
+                        <h2 class="tts-tooltip-title">Tarjeta</h2>
+                        <p class="tts-tooltip-text">Escribe el mensaje para tu ser querido</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="tooltips-script.js"></script>
+</body>
+</html>

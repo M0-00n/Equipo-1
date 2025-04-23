@@ -232,20 +232,23 @@
             <div id="list-items-tarjeta">
                 <div class="card mb-3 container py-4" style="max-width: 800px;">
                     <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="fotosPaginas/fotosPagListaProductos/tarjetas.jpg" class="card-img2" alt="...">
-                    </div>
+                        <div class="col-md-4">
+                            <img src="fotosPaginas/fotosPagListaProductos/tarjetas.jpg" class="card-img2" alt="...">
+                        </div>
                         <div class="col-md-8">
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 200px"></textarea>
-                                <label for="floatingTextarea2">Unas palabras tuyas harán que este detalle sea aún más especial.</label>
-                                <a href="#" class="btn btn-primary d-flex justify-content-center" id="botonListaProd">Guardar</a>
+                            <div class="card-body">
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="mensaje-tarjeta" placeholder="Escribe tu mensaje aquí" style="height: 200px"></textarea>
+                                    <label for="mensaje-tarjeta" class="pTipoLetra">Unas palabras tuyas harán que este detalle sea aún más especial.</label>
+                                </div>
+                                <button type="button" class="btn btn-primary" id="guardar-liston-tarjeta">Guardar</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
 
     </main>
     <footer id="footer" class="footer mt-5 container-fluid">
@@ -283,6 +286,59 @@
         </div>
     </footer>
     <!--script de bootstrap-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const botonGuardar = document.getElementById('guardar-liston-tarjeta');
+        
+            if (botonGuardar) {
+                botonGuardar.addEventListener('click', () => {
+                    const color = document.getElementById('color-liston')?.value;
+                    const mensaje = document.getElementById('mensaje-tarjeta')?.value;
+        
+                    if (!color || color === 'Selecciona el color') {
+                        alert("🌈 Por favor, selecciona un color de listón.");
+                        return;
+                    }
+        
+                    if (!mensaje || mensaje.trim() === '') {
+                        alert("💌 Por favor, escribe un mensaje para la tarjeta.");
+                        return;
+                    }
+        
+                    const timestamp = Date.now();
+        
+                    const itemListon = {
+                        id: `liston-${timestamp}`,
+                        productName: "Listón personalizado",
+                        productDescription: `Color: ${color}`,
+                        imageUrl: "fotosPaginas/fotosPagListaProductos/Listones.webp",
+                        product_price: 0,
+                        quantity: 1,
+                        liston: color
+                    };
+        
+                    const itemTarjeta = {
+                        id: `tarjeta-${timestamp}`,
+                        productName: "Tarjeta personalizada",
+                        productDescription: `Mensaje: ${mensaje}`,
+                        imageUrl: "fotosPaginas/fotosPagListaProductos/tarjetas.jpg",
+                        product_price: 0,
+                        quantity: 1,
+                        tarjetaTexto: mensaje
+                    };
+        
+                    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                    carrito.push(itemListon, itemTarjeta);
+                    localStorage.setItem('carrito', JSON.stringify(carrito));
+                    alert("🎀 ¡Listón y tarjeta añadidos al carrito!");
+                });
+            } else {
+                console.warn("⚠️ No se encontró el botón guardar-liston-tarjeta");
+            }
+        });
+        
+        </script>
+    <script src="js/carritoCompra.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/items.js"></script>
 </body>
