@@ -16,7 +16,12 @@
 </head>
 
 <body>
-    <header id="encabezadoIndex" class="encabezado">
+    <header id="encabezadoPrincipal" style="
+    background: url('fotosPaginas/fotosPagPrincipal/Fondo_título.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 75px;
+    position: relative;
+">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -40,36 +45,115 @@
     </header>
 
 
-    <main>
+    <main style="padding-top: 0px;">
 
-        <section id="ramoHotspot" class="ramoHotspot">
-            <div>
-                <h1>Personaliza tu bouquet</h1>
-            </div>
-            <div class="containerRamHot">
-                <img src="./fotosPaginas/fotosPagPrincipal/ram_hotdpot.png" alt="ramo hotspot" width="80%">
-                <div class="all-tooltips">
-                    <div class="tooltip tooltip-1">
-                        <div class="pin">
-                            <div class="tooltipcontent">
-                                <div class="arrow"></div>
-                                <div class="content">
-                                    <h1>Follaje</h1>
-                                    <p>Elije el follaje de tu agrado entre eucalipto, limonaria, pino...</p>
-                                </div>
+    <!-- Sección de tooltips como iframe -->
+    <div class="tooltips-section container px-0"> <!-- px-0 elimina padding horizontal -->
+        <iframe 
+            src="tooltips-section.html"
+            style="width: 100%; border: none;"
+            title="Personalización de Bouquet"
+            scrolling="no"
+            loading="lazy"
+            id="bouquet-iframe"
+        ></iframe>
+    </div>
 
-                            </div>
-                        </div>
-
+    <!-- Sección de envío -->
+    <section class="seccion-envio">
+        <div class="container">
+            <div class="contenedor-envio">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <img src="./fotosPaginas/fotosPagPrincipal/envio.jpeg" alt="Servicio de envío de flores" class="img-envio">
+                    </div>
+                    <div class="col-md-7 contenido-envio">
+                        <h1 class="titulo-envio">Nosotros nos encargamos de llevarlo</h1>
+                        <a href="./listaProductos.html" class="link-envio">
+                            Vamos a personalizar tu ramo desde cero
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16" class="flecha-envio">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-
-        </section>
+    <!-- Carrusel de imágenes -->
+    <section class="carrusel-cartas py-5">
+        <div class="container">
+            <h1 class="text-center h1TipoLetra mb-5">Conoce nuestras flores por temporada</h1>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div id="carruselCartas" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Item 1 -->
+                            <div class="carousel-item active">
+                                <div class="card-carrusel">
+                                    <img src="./fotosPaginas/fotosPagPrincipal/tulipanes_marzo.jpg" class="card-img-top" alt="Tulipanes marzo">
+                                    <div class="card-body">
+                                        <h5 class="h5TipoLetra">Tulipanes de marzo</h5>
+                                        <p class="pTipoLetra">Aunque no nativas de México, los tulipanes son apreciados por su gran belleza, son simbolo de la alegancia, el amor y la pasión</p>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 2 -->
+                            <div class="carousel-item">
+                                <div class="card-carrusel">
+                                    <img src="./fotosPaginas/fotosPagPrincipal/perrito_abril.webp" class="card-img-top" alt="Perritos abril">
+                                    <div class="card-body">
+                                        <h5 class="h5TipoLetra">Perritos de abril</h5>
+                                        <p class="pTipoLetra">Conocidos tambien como boca de dragón, son flores vibrantes ya que cuentan con una gran variedad de colores, simbolizan la protección y el cuidado</p>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 3 -->
+                            <div class="carousel-item">
+                                <div class="card-carrusel">
+                                    <img src="./fotosPaginas/fotosPagPrincipal/lilium_mayo.webp" class="card-img-top" alt="Lilium mayo">
+                                    <div class="card-body">
+                                        <h5 class="h5TipoLetra">Lirios</h5>
+                                        <p class="pTipoLetra">También conocidas com Flor de lis, son flores con una aroma fuerte y agradable, simbolizan diferentes cosas de acuerdo a su color, el blanco la pureza, los amarillos la felixidad en el amor.</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Controles -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carruselCartas" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carruselCartas" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    
-    
+    <!-- Sección de registro/login -->
+    <section class="seccion-registro">
+        <div class="container">
+            <div class="contenedor-registro">
+                <div class="contenido-registro">
+                    <h2 class="seccion-registro__titulo">¿Aún no eres usuario?</h2>
+                    <div class="seccion-registro__botones">
+                        <a href="iniciaSesion.html" class="seccion-registro__btn seccion-registro__btn--login">Inicia Sesión</a>
+                        <a href="registrate.html" class="seccion-registro__btn seccion-registro__btn--registro">Regístrate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
 
 
@@ -111,8 +195,49 @@
             </div>
         </div>
     </footer>
+
+    <!-- Script para ajustar altura del iframe -->
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {
+            const iframe = document.getElementById('bouquet-iframe');
+            const header = document.getElementById('encabezadoIndex');
+            
+            function adjustIframeHeight() {
+                try {
+                const bodyHeight = iframe.contentWindow.document.body.scrollHeight;
+                const windowWidth = window.innerWidth;
+                let maxHeight;
+                
+                if (windowWidth < 1024) {
+                    // Altura más compacta para pantallas pequeñas
+                    maxHeight = windowWidth < 576 ? 450 : 500;
+                    // Ajusta según la altura del header
+                    const headerHeight = header.offsetHeight;
+                    const availableHeight = window.innerHeight - headerHeight - 50; // 50px de margen
+                    iframe.style.height = Math.min(bodyHeight, Math.max(maxHeight, availableHeight)) + 'px';
+                } else {
+                    iframe.style.height = bodyHeight + 'px';
+                }
+                } catch (e) {
+                console.log('Esperando carga del iframe...');
+                setTimeout(adjustIframeHeight, 100);
+                }
+            }
+            
+            iframe.onload = adjustIframeHeight;
+            window.addEventListener('resize', adjustIframeHeight);
+            
+            // Ajuste inicial más rápido
+            setTimeout(adjustIframeHeight, 300);
+            });
+        </script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
-    <script src="js/itemsController.js"></script></body>
+    <script src="js/itemsController.js"></script>
+
+
+</body>
 </html>

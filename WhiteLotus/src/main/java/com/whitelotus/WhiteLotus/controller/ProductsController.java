@@ -22,6 +22,7 @@ public class ProductsController {
     @Autowired
     public ProductsController(ProductsService productsService) { this.productsService = productsService;}
 
+
     @GetMapping
     public List<Products> getProducts(){
         return productsService.productsList();
@@ -36,7 +37,7 @@ public class ProductsController {
         }
     }
 
-    @PostMapping
+    @PostMapping("/add-product")
     public ResponseEntity<Products> createProducts(@RequestBody Products newProducts){
         return ResponseEntity.status(HttpStatus.CREATED).body(productsService.createProducts(newProducts));
     }

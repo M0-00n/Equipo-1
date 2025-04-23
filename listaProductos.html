@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Productos</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
-    <header id="encabezadoListaProd" class="encabezado">
+    <header id="encabezadoListaProductos" style="
+    background: url('fotosPaginas/fotosPagListaProductos/header.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 75px; 
+    position: relative;
+">
         <div class="container text-center">
             <div class="row">
                 <div class="col">
@@ -138,82 +143,43 @@
         </section>
 
         <section id="flores" class="container">
-        <div class="container" style="padding-top: 80px;">
-            <div class="row">
-                <div class="col">
-                    <h1 class="h1TipoLetra">Flores</h1>
+            <div class="container" style="padding-top: 80px;">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="h1TipoLetra">Flores</h1>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="list-items">
-            <div class="card mb-3 container py-4" style="max-width: 540px;">
-                <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="fotosPaginas/fotosPagListaProductos/tulipanes.webp" class="card-img2" alt="...">
-                </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h3 class="h3TipoLetra">Tulipán</h3>
-                            <p class="pTipoLetra">Perfectos para arreglos frescos y sofisticados, disponibles en rosa, amarillo y blanco.</p>
-                            <p class="pTipoLetra">$600</p>
-                            <a href="#" class="btn btn-primary d-flex justify-content-center" id="botonListaProd">Agregar</a>
-                        </div>
-                    </div>
-                </div>
+            <div id="list-items">
+
             </div>
-        </div>
         </section>
+
         <section class="container" id="follaje">
-        <div class="container" style="padding-top: 80px;">
-            <div class="row">
-                <div class="col">
-                    <h1 class="h1TipoLetra">Follaje</h1>
-                </div>
-            </div>
-        </div>
-        <div id="list-items-follaje">
-            <div class="card mb-3 container py-4" style="max-width: 540px;">
-                <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="fotosPaginas/fotosPagListaProductos/follajeEucalipto.jpg" class="card-img2" alt="...">
-                </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h3 class="h3TipoLetra">Eucalipto</h3>
-                            <p class="pTipoLetra">Ideal para complementar ramos con su fragancia distintiva.</p>
-                            <a href="#" class="btn btn-primary d-flex justify-content-center" id="botonListaProd">Agregar</a>
-                        </div>
+            <div class="container" style="padding-top: 80px;">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="h1TipoLetra">Follaje</h1>
                     </div>
                 </div>
             </div>
-        </div>
+            <div id="list-items-follaje">
+
+            </div>
         </section>
 
         <section class="container" id="papel">
-        <div class="container" style="padding-top: 80px;">
-            <div class="row">
-                <div class="col">
-                    <h1 class="h1TipoLetra">Papel</h1>
-                </div>
-            </div>
-        </div>
-        <div id="list-items-papel" style="padding-top: 80px;">
-            <div class="card mb-3 container py-4" style="max-width: 540px;">
-                <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="fotosPaginas/fotosPagListaProductos/papelCafe.jpg" class="card-img2" alt="...">
-                </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h3 class="h3TipoLetra">Kraft</h3>
-                            <p class="pTipoLetra">Su textura rústica le da un toque sencillo y elegante.</p>
-                            <a href="#" class="btn btn-primary d-flex justify-content-center" id="botonListaProd">Agregar</a>
-                        </div>
+            <div class="container" style="padding-top: 80px;">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="h1TipoLetra">Papel</h1>
                     </div>
                 </div>
             </div>
-        </div>
+            <div id="list-items-papel" style="padding-top: 80px;">
+
+            </div>
         </section>
         <section class="container" id="liston">
             <div class="container" style="padding-top: 80px;">
@@ -254,32 +220,35 @@
                     </div>
                 </div>
             </div>
-            </section>
-            <section class="container" id="tarjeta">
-                <div class="container" style="padding-top: 80px;">
-                    <div class="row">
-                        <div class="col">
-                            <h1 class="h1TipoLetra">Tarjeta personalizada</h1>
-                        </div>
+        </section>
+        <section class="container" id="tarjeta">
+            <div class="container" style="padding-top: 80px;">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="h1TipoLetra">Tarjeta personalizada</h1>
                     </div>
                 </div>
-                <div id="list-items-tarjeta">
-                    <div class="card mb-3 container py-4" style="max-width: 800px;">
-                        <div class="row no-gutters">
+            </div>
+            <div id="list-items-tarjeta">
+                <div class="card mb-3 container py-4" style="max-width: 800px;">
+                    <div class="row no-gutters">
                         <div class="col-md-4">
                             <img src="fotosPaginas/fotosPagListaProductos/tarjetas.jpg" class="card-img2" alt="...">
                         </div>
-                            <div class="col-md-8">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 200px"></textarea>
-                                    <label for="floatingTextarea2">Unas palabras tuyas harán que este detalle sea aún más especial.</label>
-                                    <a href="#" class="btn btn-primary d-flex justify-content-center" id="botonListaProd">Guardar</a>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="mensaje-tarjeta" placeholder="Escribe tu mensaje aquí" style="height: 200px"></textarea>
+                                    <label for="mensaje-tarjeta" class="pTipoLetra">Unas palabras tuyas harán que este detalle sea aún más especial.</label>
                                 </div>
+                                <button type="button" class="btn btn-primary" id="guardar-liston-tarjeta">Guardar</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                </section>
+            </div>
+        </section>
+        
 
     </main>
     <footer id="footer" class="footer mt-5 container-fluid">
@@ -317,9 +286,60 @@
         </div>
     </footer>
     <!--script de bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="js/items.js" type="module"></script>
-    <script src="js/itemsController.js" type="module"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const botonGuardar = document.getElementById('guardar-liston-tarjeta');
+        
+            if (botonGuardar) {
+                botonGuardar.addEventListener('click', () => {
+                    const color = document.getElementById('color-liston')?.value;
+                    const mensaje = document.getElementById('mensaje-tarjeta')?.value;
+        
+                    if (!color || color === 'Selecciona el color') {
+                        alert("🌈 Por favor, selecciona un color de listón.");
+                        return;
+                    }
+        
+                    if (!mensaje || mensaje.trim() === '') {
+                        alert("💌 Por favor, escribe un mensaje para la tarjeta.");
+                        return;
+                    }
+        
+                    const timestamp = Date.now();
+        
+                    const itemListon = {
+                        id: `liston-${timestamp}`,
+                        productName: "Listón personalizado",
+                        productDescription: `Color: ${color}`,
+                        imageUrl: "fotosPaginas/fotosPagListaProductos/Listones.webp",
+                        product_price: 0,
+                        quantity: 1,
+                        liston: color
+                    };
+        
+                    const itemTarjeta = {
+                        id: `tarjeta-${timestamp}`,
+                        productName: "Tarjeta personalizada",
+                        productDescription: `Mensaje: ${mensaje}`,
+                        imageUrl: "fotosPaginas/fotosPagListaProductos/tarjetas.jpg",
+                        product_price: 0,
+                        quantity: 1,
+                        tarjetaTexto: mensaje
+                    };
+        
+                    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                    carrito.push(itemListon, itemTarjeta);
+                    localStorage.setItem('carrito', JSON.stringify(carrito));
+                    alert("🎀 ¡Listón y tarjeta añadidos al carrito!");
+                });
+            } else {
+                console.warn("⚠️ No se encontró el botón guardar-liston-tarjeta");
+            }
+        });
+        
+        </script>
+    <script src="js/carritoCompra.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/items.js"></script>
 </body>
 </html>
