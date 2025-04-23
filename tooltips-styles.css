@@ -1,0 +1,213 @@
+:root {
+    --tts-tooltip-offset: 15px;
+    --tts-pin-size: 30px;
+    --tts-pin-color: rgba(254, 213, 223, 0.5);
+    --tts-tooltip-width: 260px;
+    --tts-primary-color: #fe4365;
+    --tts-secondary-color: #828282;
+}
+
+.tts-container {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.tts-heading {
+    font-family: "Pacifico", cursive;
+    font-size: 5rem;
+    font-weight: 450;
+    color: var(--tts-primary-color);
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+}
+
+.tts-image-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tts-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tts-tooltips-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.tts-tooltip {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.tts-pin {
+    position: relative;
+    width: var(--tts-pin-size);
+    height: var(--tts-pin-size);
+    border-radius: 50%;
+    background-color: var(--tts-pin-color);
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.tts-tooltip-content {
+    position: absolute;
+    width: var(--tts-tooltip-width);
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 20;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% + var(--tts-tooltip-offset));
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.tts-tooltip-title {
+    font-family: "Pacifico", cursive;
+    font-weight: 100;
+    font-size: 2.5rem;
+    color: var(--tts-primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.tts-tooltip-text {
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    color: var(--tts-secondary-color);
+    line-height: 1.4;
+}
+
+.tts-pin::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(232, 211, 216);
+    border-radius: 50%;
+    animation: tts-pulse-effect 1s ease-in-out infinite;
+}
+
+.tts-tooltip.tts-active .tts-tooltip-content {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.tts-tooltip.tts-active {
+    z-index: 30;
+}
+
+.tts-tooltip:not(.tts-active) .tts-pin {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --tts-tooltip-width: 220px;
+    }
+    
+    .tts-heading {
+        font-size: 2.2rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --tts-tooltip-width: 200px;
+        --tts-pin-size: 25px;
+    }
+    
+    .tts-heading {
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+    
+    .tts-tooltip-content {
+        padding: 1rem;
+    }
+    
+    .tts-tooltip-title {
+        font-size: 1.5rem;
+    }
+    
+    .tts-tooltip-text {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes tts-pulse-effect {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/*Ajuste para que no quede espacio */
+
+
+/* Estilos base para la sección de tooltips */
+.tooltips-section {
+width: 100%;
+margin: 0 auto;
+padding: 20px 0;
+}
+
+/* Ajustes específicos para pantallas menores a 1024px */
+@media (max-width: 1023px) {
+.tooltips-section {
+    padding: 10px 0; /* Reduce el padding vertical */
+    margin-top: -10px; /* Compensa el espacio del header */
+}
+
+#bouquet-iframe {
+    min-height: 500px !important; /* Altura más ajustada */
+}
+
+main {
+    padding-top: 0 !important;
+}
+}
+
+/* Ajuste adicional para móviles pequeños */
+@media (max-width: 576px) {
+.tooltips-section {
+    padding: 5px 0;
+    margin-top: -15px;
+}
+
+#bouquet-iframe {
+    min-height: 450px !important;
+}
+}
