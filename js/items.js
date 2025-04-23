@@ -1,4 +1,4 @@
-const URL_API = "http://localhost:8081/products";
+const URL_API = "http://localhost:8080/products";
 const paginaActual = window.location.pathname.split("/").pop();
 
 // Cuando el DOM está listo
@@ -70,7 +70,7 @@ function mostrarProducto(producto) {
     tarjeta.innerHTML = `
         <div class="row no-gutters">
             <div class="col-md-4">
-                <img src="${producto.imageUrl}" class="card-img2" alt="Imagen de ${producto.productName}">
+                <img src="${producto.imageUrl}" class="card-img" alt="Imagen de ${producto.productName}">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
