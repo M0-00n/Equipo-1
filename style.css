@@ -917,37 +917,47 @@ main {
 }
 
 /*PAGINA DE INICIAR SESIÓN*/
-.containeriniciasesion {
+.pagina-iniciar-sesion .containeriniciasesion {
     font-family: "Inter", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* Hace que el contenedor ocupe toda la pantalla */
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-#forminiciasesion {
+.pagina-iniciar-sesion #forminiciasesion {
     font-family: "Inter", sans-serif;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
+    padding: 20px;
     background: white;
     border-radius: 10px;
-    width: 500px; /* Ajusta el ancho según necesites */
-    margin: 30 auto; /* Centra horizontalmente */
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
-
-#botoniniciarsesion {
+.pagina-iniciar-sesion #botoniniciarsesion {
     font-family: "Inter", sans-serif;
-    background-color: #83AF9B; /* Color verde agua */
-    color: white; /* Letras blancas */
-    padding: 10px 20px; /* Espacio interno */
-    border: none; /* Elimina el borde */
-    max-width: 200px; /* Tamaño máximo */
-    text-align: center; /* Centra el texto */
-    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
-    width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
-    margin: 6px auto; /* Ajusta el margen según sea necesario */
-    border-radius: 10px; /* Bordes redondeados */
+    background-color: #83AF9B;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+}
 
+/* Media query opcional */
+@media (max-width: 576px) {
+    .pagina-iniciar-sesion #forminiciasesion {
+        padding: 15px;
+    }
+
+    .pagina-iniciar-sesion #botoniniciarsesion {
+        max-width: 100%;
+    }
 }
