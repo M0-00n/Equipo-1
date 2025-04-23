@@ -21,9 +21,6 @@ public class UserService {
         return userRepository.findAll();
     }
 
-//    public User registrarUsuario(String nombre, String apellido, String email, String contrasena, String telefono){
-//
-//    }
 
     public User createUser(User newUser){
         return userRepository.save(newUser);
