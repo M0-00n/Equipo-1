@@ -9,7 +9,12 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <header id="encabezadoCarrito" class="encabezado">
+    <header id="encabezadoCarrito" style="
+    background: url('fotosPaginas/fotosCarritoCompra/CarritoCompras.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 75px;
+    position: relative;
+">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -29,23 +34,10 @@
         </nav>
     </header>
 
-    <main id="mainCarrito">
-        <div class="container text-center" id="">
-            <div class="row">
-                <div class="col-6"></div>
-                <div class="col-6">Filtro</div>  
-            </div>       
-            <div class="row">
-                <div class="col-4">
-                    <p>Aqui va el precio total de compra</p>
-                </div>
-                
-                       
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+    <main class="container my-5" id="mainCarrito"> <!--Carrito de compras-->
+        <h1 class="h1TipoLetra">Tu carrito de compra</h1>
+        <div id="carrito-contenido"></div>
+        
     </main>
 
     <footer id="footer" class="footer mt-5 container-fluid">
@@ -82,6 +74,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/carritoCompra.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
