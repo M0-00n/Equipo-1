@@ -22,7 +22,7 @@ const login = async () => {
         alert("Correo no registrado. ¿Quieres registrarte?");
         // puedes redirigir o mostrar un botón también
         if (confirm("¿Deseas ir a la página de registro?")) {
-            window.location.href = "signup.html";
+            window.location.href = "registrate.html";
         }
     } else if (response.status === 401) {
         alert("Contraseña incorrecta. Intenta nuevamente.");
