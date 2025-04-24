@@ -63,7 +63,7 @@ document.getElementById("formRegistroUsuario").addEventListener("submit", async 
 
       if (response.status === 201) {
           alert("Usuario registrado con éxito.");
-          window.location.href = "login.html";
+          window.location.href = "iniciaSesion.html";
       } else if (response.status === 409) {
           errorMsg.textContent = "Este correo ya está registrado.";
       } else {

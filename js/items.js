@@ -1,4 +1,4 @@
-const URL_API = "http://localhost:8081/products";
+const URL_API = "http://localhost:8080/products";
 const paginaActual = window.location.pathname.split("/").pop();
 
 // Cuando el DOM está listo
