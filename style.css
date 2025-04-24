@@ -818,8 +818,9 @@ main {
 .form-floating label {
     white-space: normal !important;
     word-break: break-word !important;
-  }
-
+    overflow-wrap: break-word;
+    font-size: 0.95rem;
+}
 #encabezadoListaProd{
     background: url("fotosPaginas/fotosPagListaProductos/header.jpg") no-repeat center center/cover;
     min-height: 800px; /* O la altura que necesites */
