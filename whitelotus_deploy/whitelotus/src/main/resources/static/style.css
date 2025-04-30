@@ -1,0 +1,964 @@
+/*TODAS LAS PÁGINAS*/
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
+@media (max-width: 1536px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        max-width: 475px;
+    }
+}
+
+@media (max-width: 475px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.tituloRosa {
+    font-family: "Pacifico", cursive;
+    font-weight: 100;
+    font-size: 1.8rem;
+    color: #fe4365;
+    margin-bottom: 0.5rem;
+}
+
+.pTipoLetra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #828282; 
+}
+
+.h1TipoLetra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bolder;
+    color: #adc869;
+}
+
+.h2TipoLetra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+    color: #83AF9B;
+}
+
+.h3TipoLetra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #FC9D9A;
+}
+
+.h5TipoLetra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+.h6TipoLetra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bolder;
+    color:#333;
+}
+
+.col-md-4 ul li a {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #828282;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); 
+    /* ========== VARIABLES Y ESTILOS GLOBALES ========== */
+    :root {
+        --morado-oscuro: #8A4F7D;
+        --morado-claro: #C38EB4;
+        --rosa: #FC9D9A;
+        --crema: #EAEBC8;
+        --verde: #5bdab4;
+    }
+
+    /* ========== HEADER CON IMAGEN DE FONDO ========== */
+    .encabezado {
+        background: linear-gradient(rgba(138, 79, 125, 0.7), rgba(252, 157, 154, 0.7)), 
+                    url('./fotosPaginas/fotosPagNosotras/flores.jpg') center/cover no-repeat !important;
+        min-height: 180px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    
+
+    .navbar {
+        background: transparent !important;
+        width: 100%;
+        padding: 10px 5%;
+    }
+    
+    .navbar-brand {
+        font-size: 2rem;
+        font-weight: 800;
+        color: white !important;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+    }
+
+    .navbar-brand:hover {
+        color: var(--verde) !important;
+        transform: scale(1.05);
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.1rem;
+        color: white !important;
+        font-weight: 600;
+        padding: 0.5rem 1.2rem !important;
+        margin: 0 0.3rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover {
+        color: var(--crema) !important;
+        transform: translateY(-2px);
+    }
+
+    #login {
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 0.4rem 1.5rem !important;
+        margin-left: 15px !important; /* Espacio fijo a la izquierda */
+        transition: all 0.3s ease;
+        white-space: nowrap; /* Evita que el texto se parta */
+    }
+    
+    #login:hover {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        border-color: var(--verde);
+    }
+
+    
+
+    /* ========== MENÚ HAMBURGUESA - ARREGLADO ========== */
+    .navbar-toggler {
+        border: none !important;
+        background: transparent !important;
+        padding: 8px;
+        color: white !important;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-width='2.5' stroke-linecap='round' d='M4 8h22M4 15h22M4 22h22'/%3e%3c/svg%3e") !important;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    @media (max-width: 992px) {
+        #login {
+            margin: 15px auto 0 !important; /* Centrado con margen superior */
+            display: block !important;
+            width: fit-content;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Esto centrará horizontalmente */
+            gap: 10px;
+            width: 100%; /* Ocupa todo el espacio disponible */
+        }
+    }
+
+    /* ========== CONTENIDO PRINCIPAL (SIN CAMBIOS) ========== */
+    pTipoLetra {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: #828282; 
+    }
+    
+    .h1TipoLetra {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-weight: bolder;
+        color: #adc869;
+    }
+    
+    .h2TipoLetra {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-weight: bold;
+        color: #83AF9B;
+    }
+    
+    .h3TipoLetra {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: #FC9D9A;
+    }
+    
+    .h5TipoLetra {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-weight: bolder;
+    }
+    
+    .h6TipoLetra {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-weight: bolder;
+        color:#333;
+    }
+    
+    .col-md-4 ul li a {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: #828282;
+    }
+    /* ========== RESPONSIVE ADICIONAL ========== */
+    @media (max-width: 768px) {
+        .carousel-item .card {
+            flex-direction: column;
+        }
+        
+        .carousel-item img {
+            height: 200px;
+            width: 100%;
+        }
+    }
+
+.footer {
+    background-color: #EAEBC8;
+    padding: 40px 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+    
+}
+
+
+.footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer h6 {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer .logo {
+    width: 120px;
+}
+
+.footer i {
+    font-size: 20px;
+    color: #333;
+
+}
+
+
+/*puntero circulos*/
+.click-circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(176, 241, 166, 0.7); /* Morado sin relleno */
+    border-radius: 50%;
+    pointer-events: none; /* Evita que interfiera con más clics */
+    animation: expand 3s infinite ease-out;
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(4);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(8);
+        opacity: 0;
+    }
+
+}
+
+/*PÁGINA PRINCIPAL*/
+
+/* Sección de envío */
+.seccion-envio {
+    padding: 80px 0; /* Margen blanco superior e inferior */
+}
+
+.contenedor-envio {
+    background-color: #FBE9D3; 
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion-envio .img-envio {
+    width: 100%;
+    max-width: 300px; 
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.seccion-envio .contenido-envio {
+    padding-left: 40px;
+}
+
+.seccion-envio .titulo-envio {
+    font-family: "Pacifico", cursive;
+    color: #FE4365; 
+    font-size: 5rem;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.seccion-envio .link-envio {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Pacifico", cursive;
+    color: #FE4365; 
+    font-weight: 400;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.seccion-envio .flecha-envio {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+    @media (max-width: 576px) {
+    width:50px;
+    height: 50px;}
+}
+
+.seccion-envio .link-envio:hover {
+    color: #6a8f7d; /* Verde más oscuro al hover */
+}
+
+.seccion-envio .link-envio:hover .flecha-envio {
+    transform: translateX(4px); /* Efecto de movimiento en la flecha */
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contenedor-envio {
+        padding: 30px;
+    }
+    
+    .seccion-envio .titulo-envio {
+        font-size: 2.5rem;
+    }
+    .seccion-envio .link-envio{
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .seccion-envio .titulo-envio {
+        font-size: 2.5rem;
+    }
+    .contenedor-envio {
+        padding: 25px;
+    }
+    
+    .seccion-envio .row {
+        flex-direction: column;
+    }
+    
+    .seccion-envio .img-envio {
+        margin-bottom: 25px;
+        max-width: 250px;
+    }
+    
+    .seccion-envio .contenido-envio {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .seccion-envio .link-envio {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .seccion-envio {
+        padding: 60px 0;
+    }
+    
+    .seccion-envio .titulo-envio {
+        font-size: 2rem;
+    }
+    .seccion-envio .link-envio{
+        font-size: 1.5rem;
+    }
+}
+
+/* Carrusel tipo cartas - Estilos con scope específico */
+.carrusel-cartas {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.carrusel-cartas .container {
+    position: relative;
+}
+
+.carrusel-cartas .card-carrusel {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 0 15%;
+    transition: transform 0.3s ease;
+}
+
+.carrusel-cartas .carousel-inner {
+    padding: 20px 0;
+}
+
+.carrusel-cartas .card-carrusel img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carrusel-cartas .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.carrusel-cartas .btn-carrusel {
+    background-color: #83AF9B;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.carrusel-cartas .btn-carrusel:hover {
+    background-color: #6a8f7d;
+    transform: translateY(-2px);
+}
+
+/* Efecto para mostrar los items laterales */
+.carrusel-cartas .carousel-item {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.carrusel-cartas .carousel-item-next:not(.carousel-item-start),
+.carrusel-cartas .carousel-item-prev:not(.carousel-item-end) {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carrusel-cartas .carousel-item-next.carousel-item-start,
+.carrusel-cartas .carousel-item-prev.carousel-item-end {
+    transform: translateX(0);
+}
+
+.carrusel-cartas .carousel-item-next,
+.carrusel-cartas .active.carousel-item-end {
+    transform: translateX(25%) scale(0.8);
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.carrusel-cartas .carousel-item-prev,
+.carrusel-cartas .active.carousel-item-start {
+    transform: translateX(-25%) scale(0.8);
+    opacity: 0.7;
+    z-index: 0;
+}
+
+/* Controles del carrusel */
+.carrusel-cartas .carousel-control-prev,
+.carrusel-cartas .carousel-control-next {
+    width: 5%;
+    opacity: 1;
+}
+
+.carrusel-cartas .carousel-control-prev-icon,
+.carrusel-cartas .carousel-control-next-icon {
+    background-color: rgba(131, 175, 155, 0.7);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-size: 60%;
+    transition: all 0.3s ease;
+}
+
+.carrusel-cartas .carousel-control-prev-icon:hover,
+.carrusel-cartas .carousel-control-next-icon:hover {
+    background-color: rgba(131, 175, 155, 0.9);
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carrusel-cartas .card-carrusel {
+        margin: 0 5%;
+    }
+    
+    .carrusel-cartas .carousel-item-next,
+    .carrusel-cartas .active.carousel-item-end {
+        transform: translateX(15%) scale(0.9);
+    }
+
+    .carrusel-cartas .carousel-item-prev,
+    .carrusel-cartas .active.carousel-item-start {
+        transform: translateX(-15%) scale(0.9);
+    }
+    
+    .carrusel-cartas .card-carrusel img {
+        height: 200px;
+    }
+    
+    .carrusel-cartas .carousel-control-prev,
+    .carrusel-cartas .carousel-control-next {
+        width: 10%;
+    }
+}
+
+/* Sección de registro/login - Estilos bien escopados */
+.seccion-registro {
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.seccion-registro .contenedor-registro {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion-registro .contenido-registro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.seccion-registro__titulo {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    font-size: 1.8rem;
+    white-space: nowrap;
+}
+
+.seccion-registro__botones {
+    display: flex;
+    gap: 20px;
+}
+
+.seccion-registro__btn {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.seccion-registro__btn--login {
+    background-color: #83AF9B;
+    color: white;
+}
+
+.seccion-registro__btn--registro {
+    background-color: #cad0c3;
+    color: #000;
+}
+
+.seccion-registro__btn--login:hover {
+    background-color: #6a8f7d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.seccion-registro__btn--registro:hover {
+    background-color: #b8bfb0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive - Cambia a vertical en pantallas pequeñas */
+@media (max-width: 768px) {
+    .seccion-registro .contenido-registro {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .seccion-registro__botones {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .seccion-registro__btn {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+    
+    .seccion-registro__titulo {
+        white-space: normal;
+        text-align: center;
+    }
+}
+/* Fin Sección de registro/login*/
+
+#h1Index {
+    font-family: "Inter", sans-serif;
+    font-size-adjust: initial;
+    font-size: 15vw; /* Usa viewport width para que el tamaño del texto sea proporcional al ancho de la ventana */
+    padding-top: 100px;
+    text-align: center;
+}
+
+#encabezadoIndex {
+    background: url("fotosPaginas/fotosPagPrincipal/Fondo_título.jpg") no-repeat center center/cover;
+    min-height: 800px; /* O la altura que necesites */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*PÁGINA DE NOSOTROS*/
+#encabezadoNos {
+    background: url("fotosPaginas/fotosPagNosotras/flores.jpg") no-repeat center center/cover;
+}
+
+#titulosobrenosotros {
+    padding: 1rem;
+    text-align: center;
+}
+#textosobrenosotros {
+    text-align: center;
+    text-align: justify;
+    padding: 1rem;  
+}
+
+/* Ajustar el ancho de la card para que no sea fijo */
+@media (max-width: 768px) {
+    .card {
+        width: 100% !important; /* Ocupar todo el ancho disponible */
+        padding: 2rem;
+    }
+
+    /* Hacer que las columnas se apilen en lugar de estar en una fila */
+    .card .row {
+        flex-direction: column; /* Apila los elementos */
+        text-align: center; /* Centra el texto */
+    }
+
+    /* Ajustar la imagen para que no se reduzca demasiado */
+    .card .col-md-4 img {
+        max-width: 150px; /* Evita que la imagen se haga demasiado grande */
+        margin: 0 auto; /* Centrar la imagen */
+        display: block;
+        width: 150px;  /* Ancho fijo */
+        height: 150px; /* Alto fijo */
+        object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
+        display: block; /* Asegura que la imagen no tenga espacios extra */
+        margin: 0 auto; /* Centra la imagen */
+    }
+
+    /* Ajustar el texto para que no se corte */
+    .card .card-body {
+        padding: 1rem;
+    }
+
+    /* Evitar que el texto se corte */
+    .card-text {
+        white-space: normal; /* Permite saltos de línea */
+        overflow: visible; /* Asegura que el texto se muestre correctamente */
+    }
+}
+
+/*PAGINA DE CONTÁCTO*/
+#encabezadoCon {
+    background: url("fotosPaginas/fotosPagNosotras/lavanda.png") no-repeat center center/cover;
+}
+
+.form-label{
+    font-family: 'Inter', sans-serif;
+    color: #FC9D9A;
+}
+
+.contenedor {
+    display: flex;               /* Utiliza Flexbox */
+    justify-content: center;     /* Centra el contenido horizontalmente */
+    align-items: center;         /* Centra el contenido verticalmente */
+    height: 100px;               /* Altura del contenedor (ajústalo según sea necesario) */
+}
+
+#botoncontacto {
+    background-color: #83AF9B; /* Color verde agua */
+    color: white; /* Letras blancas */
+    padding: 10px 20px; /* Espacio interno */
+    border: none; /* Elimina el borde */
+    max-width: 300px; /* Tamaño máximo */
+    text-align: center; /* Centra el texto */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+    width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
+    margin: 10px auto; /* Ajusta el margen según sea necesario */
+}
+
+
+/*PÁGINA DE FORMULARIO DE PPRODUCTOS*/
+#encabezadoformProducto{
+    background: url("fotosPaginas/fotosPagFormProductos/navbar_formularioProductos.jpg") no-repeat center center/cover;
+}
+
+/*PAGINA DE FORMULARIO DE COMPRAS*/
+
+#encabezadoFormCompras {
+    background: url("fotosPaginas/fotosFormCompra/girasoles.jpg") no-repeat center center/cover;
+}
+
+/*PAGINA DE LISTA DE PRODUCTOS*/
+.form-floating label {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word;
+    font-size: 0.95rem;
+}
+#encabezadoListaProd{
+    background: url("fotosPaginas/fotosPagListaProductos/header.jpg") no-repeat center center/cover;
+    min-height: 800px; /* O la altura que necesites */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#botonListaProd {
+    background-color: #83AF9B; /* Color verde agua */
+    color: white; /* Letras blancas */
+    padding: 10px 20px; /* Espacio interno */
+    border: none; /* Elimina el borde */
+    max-width: 200px; /* Tamaño máximo */
+    text-align: center; /* Centra el texto */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+    width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
+    margin: 6px auto; /* Ajusta el margen según sea necesario */
+
+}
+
+#list-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-img2 {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+/*INICIAR SESION*/
+#encabezadois{
+    background: url("fotosPaginas/fotosPagNosotras/Isesion.jpg") no-repeat center center/cover;
+}  
+
+
+/*REGISTRATE*/
+
+.registrate {
+    @media (max-width:1024px){
+        align-items: center;
+    }
+}
+
+#encabezadoReg{
+    background: url("fotosPaginas/fotosPagNosotras/Flor naranja.jpg") no-repeat center center/cover;
+    width: 100%;  /* Se ajusta al ancho del contenedor */
+    max-height: 300px; /* Limita la altura máxima */
+    object-fit: cover; /* Recorta la imagen para que encaje sin distorsionarse */
+}   
+
+#botonregistrate{
+    background-color: #83AF9B; /* Color verde agua */
+    color: white; /* Letras blancas */
+    padding: 10px 20px; /* Espacio interno */
+    border: none; /* Elimina el borde */
+    max-width: 200px; /* Tamaño máximo */
+    text-align: center; /* Centra el texto */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+    width: calc(100% - 20px); /* Deja 10px de margen a cada lado */
+    margin: 6px auto; /* Ajusta el margen según sea necesario */
+} 
+
+/*CARRITO DE COMPRAS*/
+#encabezadoCarrito {
+    background: url("fotosPaginas/fotosCarritoCompra/bouque.jpg") no-repeat center center/cover;
+}
+
+#mainCarrito .col-md-4{
+    padding: 10px;
+}
+
+#mainCarrito .card-text {
+    font-family: "Inter", sans-serif;
+    font-size-adjust: initial;
+    font-size: 40px; /* Usa viewport width para que el tamaño del texto sea proporcional al ancho de la ventana */
+    text-align: center;
+    font-weight: 600;
+}
+
+#mainCarrito .precio {
+    font-family: "Inter", sans-serif;
+    font-size-adjust: initial;
+    font-size: 20px; /* Usa viewport width para que el tamaño del texto sea proporcional al ancho de la ventana */
+    text-align: left;
+    font-weight: 300;
+}
+
+/*PAGINA DE INICIAR SESIÓN*/
+.pagina-iniciar-sesion .containeriniciasesion {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.pagina-iniciar-sesion #forminiciasesion {
+    font-family: "Inter", sans-serif;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.pagina-iniciar-sesion #botoniniciarsesion {
+    font-family: "Inter", sans-serif;
+    background-color: #83AF9B;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Media query opcional */
+@media (max-width: 576px) {
+    .pagina-iniciar-sesion #forminiciasesion {
+        padding: 15px;
+    }
+
+    .pagina-iniciar-sesion #botoniniciarsesion {
+        max-width: 100%;
+    }
+}
