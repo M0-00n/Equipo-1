@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Lotus Carrito</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+
+        
+        :root {
+            --primary: #6d4c41;
+            --secondary: #a5d6a7;
+            --light: #f8f9fa;
+            --error: #ff6b6b;
+        }
+        * {
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--light);
+        }
+        header {
+            padding: 0; /* Eliminar padding del header */
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+        .checkout-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .payment-total {
+            font-size: 24px;
+            text-align: center;
+            padding: 15px;
+            border-bottom: 2px dashed #d7ccc8;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--secondary);
+            outline: none;
+        }
+        input.error, select.error {
+            border-color: var(--error);
+        }
+        .error-message {
+            color: var(--error);
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        .card-fields {
+            display: flex;
+            gap: 10px;
+        }
+        .card-fields input {
+            flex: 1;
+            text-align: center;
+        }
+        .checkbox {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .checkbox input {
+            width: auto;
+            margin-right: 10px;
+        }
+        button {
+            background-color: var(--secondary);
+            color: #2e7d32;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #81c784;
+        }
+        
+        /* Corregir el footer */
+        footer {
+            margin-top: 0;
+            padding: 20px 0;
+            background-color: white;
+        }
+        
+        @media (min-width: 768px) {
+            .checkout-container {
+                grid-template-columns: 1fr 1fr;
+            }
+            .payment-section {
+                grid-column: span 2;
+            }
+        }
+        
+        /* Para hacer el encabezado fijo */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header id="encabezadoFormCompras" style="
+    background: url('fotosPaginas/fotosFormCompra/girasoles.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 75px; /* Altura mínima (antes era height fijo) */
+    position: relative;
+">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="listaProductos.html">Personaliza tu ramo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="carritoCompra.html">Carrito de compra</a></li>
+                        <li id="login" class="nav-item"><a class="nav-link" href="iniciaSesion.html">Inicia Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="checkout-container">
+            <!-- Sección 1: Total a pagar -->
+            <div class="section payment-section">
+                <h1>Checkout</h1>
+                <div class="payment-total">
+                    Total a pagar: <strong>$$$$</strong>
+                </div>
+            </div>
+            
+            <!-- Sección 2: Datos bancarios -->
+            <div class="section">
+                <h2>Datos bancarios</h2>
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label>Número de Tarjeta</label>
+                        <div class="card-fields">
+                            <input type="text" maxlength="4" placeholder="____" data-card-part="1" class="card-number">
+                            <input type="text" maxlength="4" placeholder="____" data-card-part="2" class="card-number">
+                            <input type="text" maxlength="4" placeholder="____" data-card-part="3" class="card-number">
+                            <input type="text" maxlength="4" placeholder="____" data-card-part="4" class="card-number">
+                        </div>
+                        <div class="error-message" id="cardError">Ingresa un número de tarjeta válido (16 dígitos)</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Caducidad</label>
+                        <div class="card-fields">
+                            <input type="text" maxlength="2" placeholder="MM" id="expMonth">
+                            <input type="text" maxlength="2" placeholder="YY" id="expYear">
+                        </div>
+                        <div class="error-message" id="expiryError">Ingresa una fecha válida (MM/YY)</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Titular de la tarjeta</label>
+                        <input type="text" placeholder="Nombre como aparece en la tarjeta" id="cardName">
+                        <div class="error-message" id="nameError">Ingresa el nombre del titular</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>CVV</label>
+                        <input type="text" maxlength="3" placeholder="***" style="width: 80px;" id="cvv">
+                        <div class="error-message" id="cvvError">Ingresa un CVV válido (3 dígitos)</div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Sección 3: Dirección -->
+            <div class="section">
+                <h2>Dirección</h2>
+                <p>Enviamos flores 24/7</p>
+                
+                <form id="addressForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Nombre completo</label>
+                            <input type="text" id="fullName" required>
+                            <div class="error-message" id="nameError2">Ingresa tu nombre completo</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Estado</label>
+                            <select id="estado" required onchange="cargarMunicipios()">
+                                <option value="">Selecciona...</option>
+                                <option value="01">Aguascalientes</option>
+                                <option value="02">Baja California</option>
+                                <option value="03">Baja California Sur</option>
+                                <option value="04">Campeche</option>
+                                <option value="05">Coahuila</option>
+                                <option value="06">Colima</option>
+                                <option value="07">Chiapas</option>
+                                <option value="08">Chihuahua</option>
+                                <option value="09">Ciudad de México</option>
+                                <option value="10">Durango</option>
+                                <option value="11">Guanajuato</option>
+                                <option value="12">Guerrero</option>
+                                <option value="13">Hidalgo</option>
+                                <option value="14">Jalisco</option>
+                                <option value="15">Estado de México</option>
+                                <option value="16">Michoacán</option>
+                                <option value="17">Morelos</option>
+                                <option value="18">Nayarit</option>
+                                <option value="19">Nuevo León</option>
+                                <option value="20">Oaxaca</option>
+                                <option value="21">Puebla</option>
+                                <option value="22">Querétaro</option>
+                                <option value="23">Quintana Roo</option>
+                                <option value="24">San Luis Potosí</option>
+                                <option value="25">Sinaloa</option>
+                                <option value="26">Sonora</option>
+                                <option value="27">Tabasco</option>
+                                <option value="28">Tamaulipas</option>
+                                <option value="29">Tlaxcala</option>
+                                <option value="30">Veracruz</option>
+                                <option value="31">Yucatán</option>
+                                <option value="32">Zacatecas</option>
+                            </select>
+                            <div class="error-message" id="stateError">Selecciona un estado</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Delegación o Municipio</label>
+                            <select id="municipio" required disabled>
+                                <option value="">Primero selecciona un estado</option>
+                            </select>
+                            <div class="error-message" id="municipalityError">Selecciona una delegación/municipio</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Calle y Número</label>
+                            <input type="text" id="street" required>
+                            <div class="error-message" id="streetError">Ingresa tu calle y número</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Código Postal(5 dígitos)</label>
+                            <input type="text" id="zipCode" pattern="[0-9]{5}" required>
+                            <div class="error-message" id="zipError">Ingresa un código postal válido (5 dígitos)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Nota de envío (opcional)</label>
+                        <textarea rows="3" id="note"></textarea>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <input type="checkbox" id="saveAddress">
+                        <label for="saveAddress">Guardar información de envío</label>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn">Confirmar pedido</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer id="footer" class="footer container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-center text-md-start">
+                    <div class="d-flex align-items-center">
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <img src="./fotosPaginas/fotosPagNosotras/logo.png.png" alt="White Lotus Logo" class="logo mt-3 img-fluid ">
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h6 class="h6TipoLetra">Explora</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="sobreNosotras.html">Sobre nosotras</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h6 class="h6TipoLetra">Recursos</h6>
+                    <ul class="list-unstyled">
+                        <li><a class="pTipoLetra" href="formProducto.html">Formulario de productos</a></li>
+                        <li><a class="pTipoLetra" href="contacto.html">Trabaja con Nosotrxs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 text-center text-md-end">
+                    <h6 class="h6TipoLetra">Por el equipo Dreamcode:</h6>
+                    <p class="pTipoLetra">Ana Paola, Dani, Ana Karen, Estefanía y Montse</p>
+                    <p class="pTipoLetra">whitelotusfloreria@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+     // Objeto que mapea los valores del select a las claves de estadosMunicipios
+const estadoMapping = {
+    "01": "AGU",
+    "02": "BCN",
+    "03": "BCS",
+    "04": "CAM",
+    "05": "COA",
+    "06": "COL",
+    "07": "CHP",
+    "08": "CHH",
+    "09": "CDMX",
+    "10": "DUR",
+    "11": "GUA",
+    "12": "GRO",
+    "13": "HID",
+    "14": "JAL",
+    "15": "MEX",
+    "16": "MIC",
+    "17": "MOR",
+    "18": "NAY",
+    "19": "NLE",
+    "20": "OAX",
+    "21": "PUE",
+    "22": "QUE",
+    "23": "ROO",
+    "24": "SLP",
+    "25": "SIN",
+    "26": "SON",
+    "27": "TAB",
+    "28": "TAM",
+    "29": "TLA",
+    "30": "VER",
+    "31": "YUC",
+    "32": "ZAC"
+};
+
+// Objeto compacto con estados y municipios
+const estadosMunicipios = {
+    "AGU": ["Aguascalientes", "Asientos", "Calvillo", "Cosío", "Jesús María", "Pabellón de Arteaga", "Rincón de Romos", "San José de Gracia", "Tepezalá", "El Llano", "San Francisco de los Romo"],
+    "BCN": ["Ensenada", "Mexicali", "Playas de Rosarito", "Tecate", "Tijuana"],
+    "BCS": ["Comondú", "La Paz", "Loreto", "Los Cabos", "Mulegé"],
+    "CAM": ["Calakmul", "Calkiní", "Campeche", "Candelaria", "Carmen", "Champotón", "Escárcega", "Hecelchakán", "Hopelchén", "Palizada", "Tenabo"],
+    "CHP": ["Tuxtla Gutiérrez", "San Cristóbal de las Casas", "Tapachula", "Palenque", "Comitán", "Chiapa de Corzo", "Ocosingo", "Tonalá", "Villaflores", "Las Margaritas", "Cintalapa"],
+    "CHH": ["Chihuahua", "Ciudad Juárez", "Delicias", "Cuauhtémoc", "Parral", "Nuevo Casas Grandes", "Camargo", "Jiménez", "Guerrero", "Madera", "Saucillo"],
+    "CDMX": ["Álvaro Obregón", "Azcapotzalco", "Benito Juárez", "Coyoacán", "Cuajimalpa", "Cuauhtémoc", "Gustavo A. Madero", "Iztacalco", "Iztapalapa", "Magdalena Contreras", "Miguel Hidalgo", "Milpa Alta", "Tláhuac", "Tlalpan", "Venustiano Carranza", "Xochimilco"],
+    "COA": ["Saltillo", "Torreón", "Monclova", "Piedras Negras", "Acuña", "Matamoros", "Ramos Arizpe", "San Pedro", "Frontera", "Sabinas", "Parras"],
+    "COL": ["Colima", "Manzanillo", "Tecomán", "Villa de Álvarez", "Armería", "Comala", "Coquimatlán", "Cuauhtémoc", "Ixtlahuacán", "Minatitlán"],
+    "DUR": ["Durango", "Gómez Palacio", "Lerdo", "Santiago Papasquiaro", "Pueblo Nuevo", "Guadalupe Victoria", "Poanas", "Nombre de Dios", "Canatlán", "Mapimí", "Tlahualilo"],
+    "GUA": ["León", "Irapuato", "Celaya", "Salamanca", "Silao", "Guanajuato", "Pénjamo", "San Miguel de Allende", "Dolores Hidalgo", "Valle de Santiago", "San Francisco del Rincón"],
+    "GRO": ["Acapulco", "Chilpancingo", "Iguala", "Taxco", "Zihuatanejo", "Chilapa", "Tlapa", "Ayutla", "Coyuca de Catalán", "Tecpan de Galeana", "Atoyac"],
+    "HID": ["Pachuca", "Tulancingo", "Huejutla", "Ixmiquilpan", "Tula", "Tepeji del Río", "Actopan", "Tizayuca", "Apan", "Zimapán", "Zacualtipán"],
+    "JAL": ["Guadalajara", "Zapopan", "Tlaquepaque", "Tonalá", "Tlajomulco", "Puerto Vallarta", "Lagos de Moreno", "El Salto", "Tepatitlán", "Zapotlanejo", "La Barca"],
+    "MEX": ["Ecatepec", "Nezahualcóyotl", "Naucalpan", "Toluca", "Tlalnepantla", "Chimalhuacán", "Cuautitlán Izcalli", "Atizapán", "Tultitlán", "Ixtapaluca", "Nicolás Romero"],
+    "MIC": ["Morelia", "Uruapan", "Lázaro Cárdenas", "Zamora", "Zitácuaro", "Apatzingán", "Hidalgo", "La Piedad", "Sahuayo", "Pátzcuaro", "Maravatío"],
+    "MOR": ["Cuernavaca", "Jiutepec", "Cuautla", "Temixco", "Emiliano Zapata", "Yautepec", "Ayala", "Puente de Ixtla", "Jojutla", "Xochitepec", "Tlaltizapán"],
+    "NAY": ["Tepic", "Santiago Ixcuintla", "Compostela", "Bahía de Banderas", "Tecuala", "Acaponeta", "Xalisco", "San Blas", "Ixtlán del Río", "Tuxpan", "Ruíz"],
+    "NLE": ["Monterrey", "Guadalupe", "Apodaca", "San Nicolás", "General Escobedo", "Santa Catarina", "Juárez", "García", "San Pedro Garza García", "Cadereyta", "Linares"],
+    "OAX": ["Oaxaca de Juárez", "Tuxtepec", "Juchitán", "Huajuapan", "Salina Cruz", "San Juan Bautista Tuxtepec", "Pinotepa Nacional", "Matías Romero", "Miahuatlán", "Tlacolula", "Ixtepec"],
+    "PUE": ["Puebla", "Tehuacán", "San Martín Texmelucan", "Atlixco", "San Pedro Cholula", "Amozoc", "Huauchinango", "Teziutlán", "Izúcar de Matamoros", "Tecamachalco", "Zacatlán"],
+    "QUE": ["Querétaro", "San Juan del Río", "Corregidora", "El Marqués", "Tequisquiapan", "Pedro Escobedo", "Cadereyta", "Colón", "Amealco", "Jalpan de Serra", "Ezequiel Montes"],
+    "ROO": ["Cancún", "Chetumal", "Playa del Carmen", "Cozumel", "Tulum", "Felipe Carrillo Puerto", "Isla Mujeres", "José María Morelos", "Bacalar", "Lázaro Cárdenas", "Puerto Morelos"],
+    "SLP": ["San Luis Potosí", "Soledad", "Ciudad Valles", "Matehuala", "Rioverde", "Tamazunchale", "Ciudad Fernández", "Mexquitic", "Salinas", "Villa de Reyes", "Cárdenas"],
+    "SIN": ["Culiacán", "Mazatlán", "Los Mochis", "Guasave", "Guamúchil", "Navolato", "Escuinapa", "El Fuerte", "Rosario", "Sinaloa de Leyva", "Concordia"],
+    "SON": ["Hermosillo", "Ciudad Obregón", "Navojoa", "Nogales", "San Luis Río Colorado", "Guaymas", "Huatabampo", "Empalme", "Caborca", "Puerto Peñasco", "Agua Prieta"],
+    "TAB": ["Villahermosa", "Cárdenas", "Comalcalco", "Huimanguillo", "Macuspana", "Paraíso", "Tenosique", "Centla", "Jalpa de Méndez", "Nacajuca", "Teapa"],
+    "TAM": ["Reynosa", "Matamoros", "Nuevo Laredo", "Tampico", "Ciudad Victoria", "Ciudad Madero", "Altamira", "Río Bravo", "Mante", "Valle Hermoso", "San Fernando"],
+    "TLA": ["Tlaxcala", "Apizaco", "Huamantla", "Chiautempan", "Zacatelco", "Calpulalpan", "Tlaxco", "Contla", "Tetla", "Papalotla", "Ixtacuixtla"],
+    "VER": ["Veracruz", "Xalapa", "Coatzacoalcos", "Córdoba", "Poza Rica", "Orizaba", "Minatitlán", "Boca del Río", "Tuxpan", "Martínez de la Torre", "San Andrés Tuxtla"],
+    "YUC": ["Mérida", "Valladolid", "Tizimín", "Progreso", "Ticul", "Umán", "Tekax", "Motul", "Izamal", "Oxkutzcab", "Kanasín"],
+    "ZAC": ["Zacatecas", "Fresnillo", "Guadalupe", "Jerez", "Río Grande", "Sombrerete", "Calera", "Ojocaliente", "Tlaltenango", "Pinos", "Loreto"]
+};
+
+// Función para cargar municipios
+function cargarMunicipios() {
+    const estadoSelect = document.getElementById('estado');
+    const municipioSelect = document.getElementById('municipio');
+    
+    // Limpiar select de municipios
+    municipioSelect.innerHTML = '';
+    municipioSelect.disabled = true;
+    
+    if (!estadoSelect.value) {
+        municipioSelect.innerHTML = '<option value="">Primero selecciona un estado</option>';
+        return;
+    }
+    
+    // Convertir valor del estado al código usado en estadosMunicipios
+    const estadoCodigo = estadoMapping[estadoSelect.value];
+    const municipios = estadosMunicipios[estadoCodigo] || [];
+    
+    // Agregar opción inicial
+    municipioSelect.innerHTML = '<option value="">Selecciona municipio</option>';
+    
+    // Agregar municipios al select
+    if (municipios.length === 0) {
+        const option = document.createElement('option');
+        option.value = "";
+        option.textContent = "No hay datos disponibles";
+        municipioSelect.appendChild(option);
+    } else {
+        municipios.forEach(municipio => {
+            const option = document.createElement('option');
+            option.value = municipio;
+            option.textContent = municipio;
+            municipioSelect.appendChild(option);
+        });
+    }
+    
+    // Habilitar el select de municipios
+    municipioSelect.disabled = false;
+}
+
+// Agregar validación del formulario
+document.getElementById('addressForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let isValid = true;
+    
+    // Validar nombre
+    const fullName = document.getElementById('fullName');
+    if (!fullName.value.trim()) {
+        document.getElementById('nameError2').style.display = 'block';
+        isValid = false;
+    } else {
+        document.getElementById('nameError2').style.display = 'none';
+    }
+    
+    // Validar estado
+    const estado = document.getElementById('estado');
+    if (!estado.value) {
+        document.getElementById('stateError').style.display = 'block';
+        isValid = false;
+    } else {
+        document.getElementById('stateError').style.display = 'none';
+    }
+    
+    // Validar municipio
+    const municipio = document.getElementById('municipio');
+    if (!municipio.value) {
+        document.getElementById('municipalityError').style.display = 'block';
+        isValid = false;
+    } else {
+        document.getElementById('municipalityError').style.display = 'none';
+    }
+    
+    // Validar calle
+    const street = document.getElementById('street');
+    if (!street.value.trim()) {
+        document.getElementById('streetError').style.display = 'block';
+        isValid = false;
+    } else {
+        document.getElementById('streetError').style.display = 'none';
+    }
+    
+    // Validar código postal
+    const zipCode = document.getElementById('zipCode');
+    if (!zipCode.value.trim() || !/^\d{5}$/.test(zipCode.value.trim())) {
+        document.getElementById('zipError').style.display = 'block';
+        isValid = false;
+    } else {
+        document.getElementById('zipError').style.display = 'none';
+    }
+    
+    if (isValid) {
+        alert('¡Gracias por tu compra! Pronto recibirás tu pedido.');
+        // Aquí podrías enviar los datos al servidor
+    }
+});
+
+// Validación de tarjeta de crédito
+const cardInputs = document.querySelectorAll('.card-number');
+cardInputs.forEach((input, index) => {
+    input.addEventListener('input', function() {
+        if (this.value.length === 4 && index < cardInputs.length - 1) {
+            cardInputs[index + 1].focus();
+        }
+    });
+    
+    input.addEventListener('keydown', function(e) {
+        // Permitir solo números
+        if (!/^\d$/.test(e.key) && e.key !== 'Backspace' && e.key !== 'Delete' && e.key !== 'Tab') {
+            e.preventDefault();
+        }
+    });
+});
+
+// Validación para MM/YY
+document.getElementById('expMonth').addEventListener('keydown', function(e) {
+    if (!/^\d$/.test(e.key) && e.key !== 'Backspace' && e.key !== 'Delete' && e.key !== 'Tab') {
+        e.preventDefault();
+    }
+});
+
+document.getElementById('expMonth').addEventListener('input', function() {
+    if (this.value.length === 2) {
+        document.getElementById('expYear').focus();
+    }
+});
+
+document.getElementById('expYear').addEventListener('keydown', function(e) {
+    if (!/^\d$/.test(e.key) && e.key !== 'Backspace' && e.key !== 'Delete' && e.key !== 'Tab') {
+        e.preventDefault();
+    }
+});
+
+// Asegurarse de que el script esté listo para el evento onchange
+window.onload = function() {
+    document.getElementById('estado').onchange = cargarMunicipios;
+};
+    </script>
+</body>
+</html>

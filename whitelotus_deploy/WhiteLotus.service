@@ -1,0 +1,18 @@
+[Unit]
+Description=Spring Boot App
+After=syslog.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/src
+ExecStart=/usr/bin/java -jar /home/ubuntu/src/WhiteLotus.jar
+Environment="PROD_DB_HOST=localhost"
+Environment="PROD_DB_NAME=whitelotusdb"
+Environment="PROD_DB_USERNAME=dreamcode"
+Environment="PROD_DB_PASSWORD=whitel0tus$*"
+Environment="PROD_DDL=update"
+Restart=always
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
